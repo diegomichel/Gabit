@@ -3,16 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="8e1279c9-bbe4-4643-9e7a-6572857d06f1" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website/models.py" afterPath="$PROJECT_DIR$/website/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thegabit/settings.py" afterPath="$PROJECT_DIR$/thegabit/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="thegabit.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/settings.py" changelist="8e1279c9-bbe4-4643-9e7a-6572857d06f1" time="1371671829651" ignored="false" />
     <file path="/Dummy.txt" changelist="8e1279c9-bbe4-4643-9e7a-6572857d06f1" time="1371672153208" ignored="false" />
     <file path="/urls.py" changelist="8e1279c9-bbe4-4643-9e7a-6572857d06f1" time="1371672718990" ignored="false" />
-    <file path="/models.py" changelist="8e1279c9-bbe4-4643-9e7a-6572857d06f1" time="1371673926011" ignored="false" />
+    <file path="/models.py" changelist="8e1279c9-bbe4-4643-9e7a-6572857d06f1" time="1371675589415" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +41,7 @@
       <file leaf-file-name="models.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/website/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="32" selection-start="419" selection-end="419" vertical-scroll-proportion="0.27149877">
+            <state line="13" column="34" selection-start="423" selection-end="423" vertical-scroll-proportion="0.27149877">
               <folding />
             </state>
           </provider>
@@ -455,7 +452,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/website/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="32" selection-start="419" selection-end="419" vertical-scroll-proportion="0.27149877">
+        <state line="13" column="34" selection-start="423" selection-end="423" vertical-scroll-proportion="0.27149877">
           <folding />
         </state>
       </provider>

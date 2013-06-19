@@ -8,8 +8,10 @@ class User(models.Model):
 
 class Task(models.Model):
     user = models.ForeignKey(User)
+    tags = models.ManyToManyField(Tag)
     title = models.CharField(max_length=117)
     value = models.IntegerField()
+    damage = models.IntegerField()
     priority = models.IntegerField()
     completed_at = models.DateTimeField('completed at')
     created_at = models.DateTimeField('date created')
@@ -21,3 +23,7 @@ class Reward(models.Model):
     cost = models.IntegerField()
     created_at = models.DateTimeField()
     expire_at = models.DateTimeField()
+
+class Tag(models.Model):
+    user = models.ForeignKey(User)
+    title = models.CharField(max_length=30)
