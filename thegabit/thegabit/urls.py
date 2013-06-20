@@ -6,7 +6,7 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     # Examples:
-    # url(r'^$', 'thegabit.views.home', name='home'),
+    url(r'^$', 'website.views.index', name='index'),
     # url(r'^thegabit/', include('thegabit.foo.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:

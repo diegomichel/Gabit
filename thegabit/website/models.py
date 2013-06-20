@@ -27,12 +27,21 @@ class Task(models.Model):
     tags = models.ManyToManyField(Tag)
     title = models.CharField(max_length=117)
     value = models.IntegerField(default=10)
+    type = models.IntegerField(default=0)
     damage = models.IntegerField(default=10)
     priority = models.IntegerField(default=0)
     completed_at = models.DateTimeField('completed at')
     created_at = models.DateTimeField('date created')
+
+    todo = 0
+    habit = 1
+    daily = 2
+
+
+
     def __unicode__(self):
         return self.title
+
 
 class Reward(models.Model):
     user = models.ForeignKey(User)
