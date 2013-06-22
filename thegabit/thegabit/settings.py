@@ -152,3 +152,5 @@ LOGGING = {
         },
     }
 }
+
+AUTH_PROFILE_MODULE = 'website.UserProfile'

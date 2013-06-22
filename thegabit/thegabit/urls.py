@@ -9,6 +9,8 @@ urlpatterns = patterns('',
     url(r'^$', 'website.views.index', name='index'),
     url(r'^login$',  'website.views.loginUser', name='loginUser'),
     url(r'^logout$',  'website.views.logoutUser', name='logoutUser'),
+    url(r'^gethabits$',  'website.views.getHabits', name='getHabits'),
+    url(r'^saveHabitsOrder/$',  'website.views.saveHabitsOrder', name='saveHabitsOrder'),
 
     (r'^accounts/login/$', 'django.contrib.auth.views.login'),
 

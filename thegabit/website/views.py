@@ -1,14 +1,34 @@
 # Create your views here.
 from django.contrib.auth import authenticate, login, logout
 from django.http import HttpResponse
-from website.models import User
+from website.models import UserProfile,Task
 from django.template import Context, loader
 from django.shortcuts import render
+import string
 
 def index(request):
-    latest_user_list = User.objects.all()
+    latest_user_list = UserProfile.objects.all()
     context ={'latest_user_list': latest_user_list}
     return render(request, 'users/index.html', context)
+
+def getHabits(request):
+    latest_user_list = UserProfile.objects.all()
+    tasks = Task.objects.filter(user__pk=request.user.pk).order_by('order')
+    context ={'tasks': tasks, 'value':tasks}
+    return render(request, 'tasks/habits.html', context)
+
+def saveHabitsOrder(request):
+    order = request.GET['order']
+    ids = string.split(order,",")
+    User = request.user;
+    order = 0;
+    for id in ids:
+        task = User.task_set.filter(pk=id)#.objects.get(pk=id)
+        order+=1
+        task.update(order = order)
+        print task, order
+
+    return render(request, 'users/blank.html', {'value':1})
 
 def loginUser(request):
     context = {'value': request.user.is_authenticated()}

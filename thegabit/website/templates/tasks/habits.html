@@ -1,0 +1,14 @@
+<dl class=listHabit id=sortable>
+    <dt class=wontMove>
+        Habits<br />
+        <input id=buttonNewHabit type=text /><button>+</button>
+    </dt>
+    {% if tasks %}
+
+    {% for task in tasks %}
+        <dd class=task id={{ task.id }}>{{ task.title }}</dd>
+    {% endfor %}
+
+{% else %}
+{% endif %}
+</dl>

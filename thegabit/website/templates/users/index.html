@@ -7,11 +7,35 @@
     <script src="{% static 'users/common.js' %}"></script>
     <link rel="stylesheet" href="{% static 'users/style.css' %}"/>
     <script>
-
         /* Here i can code everything then move it outside... */
+        var loged = false;
         $(function () {
             User.login();
         });
+
+        var Tasks = {
+            load: function () {
+                if (!loged) return;
+                $.ajax({
+                    type: "GET",
+                    url: "gethabits",
+                    data: {}
+                }).done(function (response) {
+                            $("div#content").append(response);
+                            $("#sortable").sortable({
+                                update: function (event, ui) {
+                                    var newOrder = $(this).sortable('toArray').toString();
+                                    console.log(newOrder);
+                                    $.get('saveHabitsOrder/', {order: newOrder}, function(result){
+                                        alert(result);
+                                    });
+                                },
+                                items: "dd:not(.wontMove)"
+                            });
+                            $("#sortable").disableSelection();
+                        })
+            }
+        }
 
         var User = {
             login: function () {
@@ -25,8 +49,10 @@
                 }).done(function (msg) {
                             //alert(msg);
                             if (msg == "True") {
+                                loged = true;
                                 $("div#header").html("<a id=logoutButton href=#>Logout</a>");
                                 User.logout();
+                                Tasks.load();
                             }
                             else {
                                 $.ajax({
