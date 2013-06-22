@@ -1,13 +1,12 @@
 import datetime
+import django.contrib.auth
 from django.db import models
 from django.utils import timezone
 
 #create your models here
 class User(models.Model):
-    name = models.CharField(max_length=32)
-    password = models.CharField(max_length=500)
+    user = models.ForeignKey(django.contrib.auth.models.User)
     alias = models.CharField(max_length=1000)
-    email = models.CharField(max_length=255)
     hp = models.IntegerField(default=100)
     credits = models.IntegerField(default=0)
     created_at = models.DateTimeField()

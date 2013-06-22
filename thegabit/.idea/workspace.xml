@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8e1279c9-bbe4-4643-9e7a-6572857d06f1" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/website/templates/users/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website/admin.py" afterPath="$PROJECT_DIR$/website/admin.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/website/static/users/init.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/website/templates/users/login.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/website/static/users/style.css" />
+      <change type="DELETED" beforePath="C:\Python27\theGabit\thegabit\theGabit.db" afterPath="" />
+      <change type="DELETED" beforePath="C:\Python27\theGabit\thegabit\theGabit2.db" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website/templates/users/index.html" afterPath="$PROJECT_DIR$/website/templates/users/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website/models.py" afterPath="$PROJECT_DIR$/website/models.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thegabit/urls.py" afterPath="$PROJECT_DIR$/thegabit/urls.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website/views.py" afterPath="$PROJECT_DIR$/website/views.py" />
@@ -13,12 +17,15 @@
     <ignored path=".idea/workspace.xml" />
     <file path="/settings.py" changelist="8e1279c9-bbe4-4643-9e7a-6572857d06f1" time="1371671829651" ignored="false" />
     <file path="/Dummy.txt" changelist="8e1279c9-bbe4-4643-9e7a-6572857d06f1" time="1371672153208" ignored="false" />
-    <file path="/urls.py" changelist="8e1279c9-bbe4-4643-9e7a-6572857d06f1" time="1371683551294" ignored="false" />
-    <file path="/models.py" changelist="8e1279c9-bbe4-4643-9e7a-6572857d06f1" time="1371759680317" ignored="false" />
+    <file path="/urls.py" changelist="8e1279c9-bbe4-4643-9e7a-6572857d06f1" time="1371769497509" ignored="false" />
+    <file path="/models.py" changelist="8e1279c9-bbe4-4643-9e7a-6572857d06f1" time="1371854094575" ignored="false" />
     <file path="/admin.py" changelist="8e1279c9-bbe4-4643-9e7a-6572857d06f1" time="1371682588841" ignored="false" />
-    <file path="/views.py" changelist="8e1279c9-bbe4-4643-9e7a-6572857d06f1" time="1371760321783" ignored="false" />
-    <file path="/index.html" changelist="8e1279c9-bbe4-4643-9e7a-6572857d06f1" time="1371692132034" ignored="false" />
+    <file path="/views.py" changelist="8e1279c9-bbe4-4643-9e7a-6572857d06f1" time="1371858788198" ignored="false" />
+    <file path="/index.html" changelist="8e1279c9-bbe4-4643-9e7a-6572857d06f1" time="1371859404785" ignored="false" />
     <file path="/tasks.html" changelist="8e1279c9-bbe4-4643-9e7a-6572857d06f1" time="1371702767218" ignored="false" />
+    <file path="/style.css" changelist="8e1279c9-bbe4-4643-9e7a-6572857d06f1" time="1371765073571" ignored="false" />
+    <file path="/init.js" changelist="8e1279c9-bbe4-4643-9e7a-6572857d06f1" time="1371769443345" ignored="false" />
+    <file path="/login.html" changelist="8e1279c9-bbe4-4643-9e7a-6572857d06f1" time="1371769629294" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,16 +48,34 @@
       <file leaf-file-name="settings.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/thegabit/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="109" column="9" selection-start="3922" selection-end="3922" vertical-scroll-proportion="-6.48">
+            <state line="94" column="10" selection-start="3323" selection-end="3333" vertical-scroll-proportion="-6.8">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/website/templates/users/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="11" selection-start="226" selection-end="226" vertical-scroll-proportion="-5.230769">
+            <state line="23" column="22" selection-start="945" selection-end="945" vertical-scroll-proportion="0.76516634">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="init.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/website/static/users/init.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="0" selection-start="149" selection-end="149" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/website/static/users/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="18" column="1" selection-start="353" selection-end="353" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -59,7 +84,7 @@
       <file leaf-file-name="tasks.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../mockups/tasks.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="0" selection-start="516" selection-end="516" vertical-scroll-proportion="-13.076923">
+            <state line="19" column="9" selection-start="26" selection-end="515" vertical-scroll-proportion="-12.423077">
               <folding />
             </state>
           </provider>
@@ -68,7 +93,7 @@
       <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/website/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="13" selection-start="1237" selection-end="1237" vertical-scroll-proportion="0.0">
+            <state line="24" column="32" selection-start="775" selection-end="775" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -90,19 +115,28 @@
       <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/thegabit/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="0" selection-start="452" selection-end="452" vertical-scroll-proportion="0.0">
+            <state line="13" column="60" selection-start="503" selection-end="503" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/website/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="21" selection-start="312" selection-end="312" vertical-scroll-proportion="0.31657356">
+            <state line="22" column="18" selection-start="727" selection-end="727" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="e#26#62#0" expanded="true" />
+                <element signature="e#26#70#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/website/templates/users/login.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="20" selection-start="20" selection-end="20" vertical-scroll-proportion="-0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -127,11 +161,14 @@
       <list>
         <option value="$PROJECT_DIR$/thegabit/settings.py" />
         <option value="$PROJECT_DIR$/website/admin.py" />
-        <option value="$PROJECT_DIR$/thegabit/urls.py" />
-        <option value="$PROJECT_DIR$/website/templates/users/index.html" />
         <option value="$PROJECT_DIR$/../mockups/tasks.html" />
+        <option value="$PROJECT_DIR$/website/static/users/style.css" />
+        <option value="$PROJECT_DIR$/thegabit/urls.py" />
+        <option value="$PROJECT_DIR$/website/templates/users/login.html" />
+        <option value="$PROJECT_DIR$/website/static/users/init.js" />
         <option value="$PROJECT_DIR$/website/models.py" />
         <option value="$PROJECT_DIR$/website/views.py" />
+        <option value="$PROJECT_DIR$/website/templates/users/index.html" />
       </list>
     </option>
   </component>
@@ -264,6 +301,10 @@
               <option name="myItemId" value="static" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="users" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -310,6 +351,23 @@
     </key>
   </component>
   <component name="RunManager" selected="Django server.thegabit">
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="thegabit" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <method />
+    </configuration>
     <configuration default="true" type="tests" factoryName="Unittests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -436,7 +494,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1672" y="-8" width="1296" height="1000" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -447,7 +505,7 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31986144" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3297619" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3297619" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -518,13 +576,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/thegabit/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/website/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1" column="0" selection-start="29" selection-end="29" vertical-scroll-proportion="0.0">
@@ -538,7 +589,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="e#26#62#0" expanded="true" />
+            <element signature="e#26#70#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -580,49 +631,70 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/thegabit/settings.py">
+    <entry file="file://$PROJECT_DIR$/website/static/users/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="109" column="9" selection-start="3922" selection-end="3922" vertical-scroll-proportion="-6.48">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/website/templates/users/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="11" selection-start="226" selection-end="226" vertical-scroll-proportion="-5.230769">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/website/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="13" selection-start="1237" selection-end="1237" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../mockups/tasks.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="0" selection-start="516" selection-end="516" vertical-scroll-proportion="-13.076923">
+        <state line="18" column="1" selection-start="353" selection-end="353" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/thegabit/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="0" selection-start="452" selection-end="452" vertical-scroll-proportion="0.0">
+        <state line="13" column="60" selection-start="503" selection-end="503" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/thegabit/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="94" column="10" selection-start="3323" selection-end="3333" vertical-scroll-proportion="-6.8">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="32" selection-start="775" selection-end="775" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website/static/users/init.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="0" selection-start="149" selection-end="149" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/website/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="21" selection-start="312" selection-end="312" vertical-scroll-proportion="0.31657356">
+        <state line="22" column="18" selection-start="727" selection-end="727" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="e#26#62#0" expanded="true" />
+            <element signature="e#26#70#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website/templates/users/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="20" selection-start="20" selection-end="20" vertical-scroll-proportion="-0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../mockups/tasks.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="9" selection-start="26" selection-end="515" vertical-scroll-proportion="-12.423077">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website/templates/users/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="22" selection-start="945" selection-end="945" vertical-scroll-proportion="0.76516634">
+          <folding />
         </state>
       </provider>
     </entry>
