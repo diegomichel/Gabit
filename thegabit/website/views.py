@@ -1,28 +1,36 @@
 # Create your views here.
-from django.contrib.auth import authenticate
+from django.contrib.auth import authenticate, login, logout
 from django.http import HttpResponse
 from website.models import User
 from django.template import Context, loader
 from django.shortcuts import render
-
 
 def index(request):
     latest_user_list = User.objects.all()
     context ={'latest_user_list': latest_user_list}
     return render(request, 'users/index.html', context)
 
-def login(request):
+def loginUser(request):
+    context = {'value': request.user.is_authenticated()}
     if request.user.is_authenticated():
-        return render(request, 'users/login.html',context)
+        return render(request, 'users/blank.html', context)
 
-    username = request.POST['username']
-    password = request.POST['password']
+    try:
+        username = request.POST['username']
+        password = request.POST['password']
+    except NameError:
+        return render(request, 'users/blank.html',context)
+
     user = authenticate(username=username, password=password)
     if user is not None:
         login(request, user)
-        #succefull
+        context = {'value':  request.user.is_authenticated() }
+        return render(request, 'users/blank.html',context)
     else:
-        #not success brah!
+        return render(request, 'users/blank.html',context)
 
-   #context = {'login': 0}
-   #return render(request, 'users/login.html',context)
+def logoutUser(request):
+    context = {'value': True}
+    if request.user.is_authenticated():
+        logout(request)
+        return render(request, 'users/blank.html', context)

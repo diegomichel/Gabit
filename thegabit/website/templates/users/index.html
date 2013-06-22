@@ -4,27 +4,73 @@
     <link rel="stylesheet" href="{% static 'users/jquery-ui.css' %}"/>
     <script src="{% static 'users/jquery-1.9.1.js' %}"></script>
     <script src="{% static 'users/jquery-ui.js' %}"></script>
-    <script src="{% static 'users/init.js' %}"></script>
+    <script src="{% static 'users/common.js' %}"></script>
     <link rel="stylesheet" href="{% static 'users/style.css' %}"/>
     <script>
+
+        /* Here i can code everything then move it outside... */
         $(function () {
-            $.ajax({
-                type: "POST",
-                url: "login",
-                data: {csrfmiddlewaretoken: '{{csrf_token}}' }
-            }).done(function (msg) {
-                        if (msg == "1") {
-                            //Load everything
-                            alert("I should load the data...")
-                        }
-                        else {
-                            //Load login
-                            alert("I should show some login form...");
-                        }
-                    })
+            User.login();
         });
+
+        var User = {
+            login: function () {
+                $.ajax({
+                    type: "POST",
+                    url: "login",
+                    data: {csrfmiddlewaretoken: '{{csrf_token}}', username: '', password: '' },
+                    error: function (request, status, error) {
+                        alert(request.responseText);
+                    }
+                }).done(function (msg) {
+                            //alert(msg);
+                            if (msg == "True") {
+                                $("div#header").html("<a id=logoutButton href=#>Logout</a>");
+                                User.logout();
+                            }
+                            else {
+                                $.ajax({
+                                    type: "GET",
+                                    url: "accounts/login/",
+                                    data: {csrfmiddlewaretoken: '{{csrf_token}}'},
+                                    error: function (request, status, error) {
+                                        alerta(request.responseText);
+                                    }
+                                }).done(function (msg) {
+                                            $("div#header").html("<h1>Ready to Game?</h1>");
+                                            $("div#content").html(msg);
+                                        })
+
+                            }
+                        })
+            },
+            logout: function () {
+                $("a#logoutButton").button().click(function (event) {
+                    event.preventDefault();
+                    $.ajax({
+                        type: "GET",
+                        url: "logout"
+                    }).done(function (msg) {
+                                $(this).hide();
+                                location.reload();
+                            })
+                });
+            }
+        }
+
+        var Task = {
+            view: function () {
+
+            },
+            update: function () {
+
+            }
+        }
     </script>
 </head>
 <body>
+<div id=header></div>
+<div id=content></div>
+<div id=footer></div>
 </body>
 </html>

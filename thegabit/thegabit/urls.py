@@ -7,7 +7,11 @@ admin.autodiscover()
 urlpatterns = patterns('',
     # Examples:
     url(r'^$', 'website.views.index', name='index'),
-    url(r'^login',  'website.views.login', name='login'),
+    url(r'^login$',  'website.views.loginUser', name='loginUser'),
+    url(r'^logout$',  'website.views.logoutUser', name='logoutUser'),
+
+    (r'^accounts/login/$', 'django.contrib.auth.views.login'),
+
     # url(r'^thegabit/', include('thegabit.foo.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:
@@ -15,4 +19,6 @@ urlpatterns = patterns('',
 
     # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),
+
+
 )
