@@ -5,6 +5,8 @@ from website.models import UserProfile,Task
 from django.template import Context, loader
 from django.shortcuts import render
 import string
+import json
+from django.core import serializers
 
 def index(request):
     latest_user_list = UserProfile.objects.all()
@@ -16,6 +18,15 @@ def getHabits(request):
     tasks = Task.objects.filter(user__pk=request.user.pk).order_by('order')
     context ={'tasks': tasks, 'value':tasks}
     return render(request, 'tasks/habits.html', context)
+
+def addHabit(request):
+    title = request.GET['title']
+    User = request.user;
+    task = User.task_set.create(title = title)
+    data = serializers.serialize('json', [task], fields=('title'))
+    print data
+    return HttpResponse(json.dumps(data), mimetype="application/json")
+    #return render(request, 'users/blank.html', {'value':task})
 
 def saveHabitsOrder(request):
     order = request.GET['order']

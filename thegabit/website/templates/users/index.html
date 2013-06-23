@@ -5,6 +5,7 @@
     <script src="{% static 'users/jquery-1.9.1.js' %}"></script>
     <script src="{% static 'users/jquery-ui.js' %}"></script>
     <script src="{% static 'users/common.js' %}"></script>
+    <script src="{% static 'tasks/tasks.js' %}"></script>
     <link rel="stylesheet" href="{% static 'users/UsersStyle.css' %}"/>
     <link rel="stylesheet" href="{% static 'tasks/TasksStyle.css' %}"/>
     <script>
@@ -13,28 +14,6 @@
         $(function () {
             User.login();
         });
-
-        var Tasks = {
-            load: function () {
-                if (!loged) return;
-                $.ajax({
-                    type: "GET",
-                    url: "gethabits",
-                    data: {}
-                }).done(function (response) {
-                            $("div#content").append(response);
-                            $("#sortable").sortable({
-                                update: function (event, ui) {
-                                    var newOrder = $(this).sortable('toArray').toString();
-                                    $.get('saveHabitsOrder/', {order: newOrder}, function(result){
-                                    });
-                                },
-                                items: "dd:not(.wontMove)"
-                            });
-                            $("#sortable").disableSelection();
-                        })
-            }
-        }
 
         var User = {
             login: function () {

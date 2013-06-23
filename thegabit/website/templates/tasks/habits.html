@@ -3,7 +3,6 @@
         <input class=add id=habit_title type=text/><button id=addNewHabit class=add>+</button>
     </dt>
     {% if tasks %}
-
     {% for task in tasks %}
         <dd class=task id={{ task.id }}>
         <ul>
@@ -16,7 +15,6 @@
         </ul>
     </dd>
     {% endfor %}
-
 {% else %}
 {% endif %}
 </dl>

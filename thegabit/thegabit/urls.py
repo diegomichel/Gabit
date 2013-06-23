@@ -11,6 +11,7 @@ urlpatterns = patterns('',
     url(r'^logout$',  'website.views.logoutUser', name='logoutUser'),
     url(r'^gethabits$',  'website.views.getHabits', name='getHabits'),
     url(r'^saveHabitsOrder/$',  'website.views.saveHabitsOrder', name='saveHabitsOrder'),
+    url(r'^addHabit/$',  'website.views.addHabit', name='addHabit'),
 
     (r'^accounts/login/$', 'django.contrib.auth.views.login'),
 
