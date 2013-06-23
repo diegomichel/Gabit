@@ -1,19 +1,21 @@
 body {
     font-size: 10px;
 }
-
+#content{
+}
 dt {
     text-align: center;
     padding-bottom: 0.2em;
 }
-
 dl {
+    height: 300px;
     font-size: 2.5em;
     list-style-type: none;
     padding: 0em 0.4em 0em 0em;
     display: inline-block;
     width: 23%;
     min-width: 11em;
+    vertical-align: top;
 }
 
 dd.task {

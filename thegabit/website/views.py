@@ -15,23 +15,22 @@ def index(request):
     context ={'latest_user_list': latest_user_list}
     return render(request, 'users/index.html', context)
 
-def getHabits(request):
-    tasks = Task.objects.filter(user__pk=request.user.pk).order_by('order', 'id')
-    context ={'tasks': tasks, 'all': True}
+def getTasks(request):
+    type = request.GET['type']
+    tasks = Task.objects.filter(user__pk=request.user.pk,type=type).order_by('order', '-id')
+    context ={'tasks': tasks, 'all': True, 'type': type}
     return render(request, 'tasks/task.html', context)
 
 def addHabit(request):
     title = request.GET['title']
+    type = request.GET['type']
     User = request.user;
-    task = User.task_set.create(title = title)
+    task = User.task_set.create(title = title, type = type)
     tasks = [task]
     context ={'tasks': tasks, 'all': False}
     rendered = render_to_string('tasks/task.html', context)
     rendered = rendered.strip()
     return HttpResponse(rendered)
-    #return render(request, 'tasks/task.html', context)
-    #return HttpResponse(json.dumps(data), mimetype="application/json")
-    #return render(request, 'users/blank.html', {'value':task})
 
 def saveHabitsOrder(request):
     order = request.GET['order']

@@ -1,48 +1,61 @@
 var Tasks = {
-    load: function () {
-        if (!loged) return;
+    loadHelper: function (id) {
         $.ajax({
             type: "GET",
-            url: "gethabits",
-            data: {}
+            url: "gettasks",
+            data: { type: id}
         }).done(function (response) {
                 $("div#content").append(response);
-                $("#sortable").sortable({
+
+                $("dl").sortable({
                     update: function (event, ui) {
                         var newOrder = $(this).sortable('toArray').toString();
-                        $.get('saveHabitsOrder/', {order: newOrder}, function (result) {
+                        $.get('saveTasksOrder/', {order: newOrder}, function (result) {
                         });
                     },
                     items: "dd:not(.wontMove)"
                 });
-                $("#sortable").disableSelection();
-                Tasks.add();
+                $("dl").disableSelection();
+                if (id == 1)
+                    Tasks.loadHelper(0);
+                if (id == 0)
+                    Tasks.loadHelper(2);
+                if (id == 2) {
+                    Tasks.add();
+                    return;
+                }
             })
+    },
+    load: function () {
+        if (!loged) return;
+        Tasks.loadHelper(1);
     },
     add: function () {
         $("#addNewHabit").click(function (event) {
             event.preventDefault();
-            Tasks.addRequest();
+            var id = $(this).closest("dl").attr("id");
+            Tasks.addRequest(id[4]);
         });
         $("dl.listHabit dt input").keypress(function (event) {
             if (event.which == 13) {
                 event.preventDefault();
-                Tasks.addRequest();
+                var id = $(this).closest("dl").attr("id");
+                Tasks.addRequest(id[4]);
             }
         });
     },
-    loadNew: function (data) {
-        $("dl.listHabit dt").after(data);
-        $("dl.listHabit dd:first").hide().fadeIn();
+    loadNew: function (data, type) {
+        $("#list"+type+" dt").after(data);
+        $("#list"+type+" dd:first").hide().fadeIn();
     },
-    addRequest: function () {
-        var habit_title = $("#habit_title").val();
+    addRequest: function (type) {
+        var habit_title = $("#habit_title"+type).val();
         if (habit_title === "") {
             alerta("Please provide the title of the habit.");
         }
         else {
-            $.get("addHabit/", {title: habit_title}, function (data) {
-                Tasks.loadNew(data);
+            $.get("addHabit/", {title: habit_title, type: type}, function (data) {
+                Tasks.loadNew(data, type);
                 $("dl.listHabit dt input").val("");
             })
         }
