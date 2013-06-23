@@ -1,9 +1,10 @@
+{% extends "tasks/habits.html" %}
 {% block listHead %}
-<dl class=listHabit id=sortable>
-    <dt>Habits<br/>
-        <input class=add id=habit_title type=text/><button id=addNewHabit class=add>+</button>
-    </dt>
-{% endblock listHead%}
+{% if all %}
+    {{ block.super }}
+{% else %}
+{% endif %}
+{% endblock listHead %}
 {% block listItems %}
     {% if tasks %}
     {% for task in tasks %}
@@ -22,5 +23,8 @@
 {% endif %}
 {% endblock listItems %}
 {% block listFooter %}
-</dl>
+{% if all %}
+    {{ block.super }}
+{% else %}
+{% endif %}
 {% endblock listFooter %}

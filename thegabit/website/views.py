@@ -7,6 +7,8 @@ from django.shortcuts import render
 import string
 import json
 from django.core import serializers
+from django.template.loader import render_to_string
+
 
 def index(request):
     latest_user_list = UserProfile.objects.all()
@@ -14,18 +16,21 @@ def index(request):
     return render(request, 'users/index.html', context)
 
 def getHabits(request):
-    latest_user_list = UserProfile.objects.all()
-    tasks = Task.objects.filter(user__pk=request.user.pk).order_by('order')
-    context ={'tasks': tasks, 'value':tasks}
-    return render(request, 'tasks/habits.html', context)
+    tasks = Task.objects.filter(user__pk=request.user.pk).order_by('order', 'id')
+    context ={'tasks': tasks, 'all': True}
+    return render(request, 'tasks/task.html', context)
 
 def addHabit(request):
     title = request.GET['title']
     User = request.user;
     task = User.task_set.create(title = title)
-    data = serializers.serialize('json', [task], fields=('title'))
-    print data
-    return HttpResponse(json.dumps(data), mimetype="application/json")
+    tasks = [task]
+    context ={'tasks': tasks, 'all': False}
+    rendered = render_to_string('tasks/task.html', context)
+    rendered = rendered.strip()
+    return HttpResponse(rendered)
+    #return render(request, 'tasks/task.html', context)
+    #return HttpResponse(json.dumps(data), mimetype="application/json")
     #return render(request, 'users/blank.html', {'value':task})
 
 def saveHabitsOrder(request):

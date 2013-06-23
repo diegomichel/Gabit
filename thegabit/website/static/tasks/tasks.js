@@ -22,31 +22,29 @@ var Tasks = {
     add: function () {
         $("#addNewHabit").click(function (event) {
             event.preventDefault();
-            var habit_title = $("#habit_title").val();
-            if (habit_title === "") {
-                alerta("Please provide the title of the habit.");
+            Tasks.addRequest();
+        });
+        $("dl.listHabit dt input").keypress(function (event) {
+            if (event.which == 13) {
+                event.preventDefault();
+                Tasks.addRequest();
             }
-            else {
-                $.get("addHabit/",{title: habit_title}, function(data){
-                    Tasks.reload(data);
-                })
-            }
-        })
+        });
     },
-    reload: function(data){
-        var jsonObject = JSON.parse(data);
-        var id = jsonObject[0].pk;
-        var title = jsonObject[0].fields.title;
-        var element = "<dd class='task' id='"+id+"'>\
-        <ul>\
-            <li class='taskHit'>\
-                <button class='taskButton'>☒</button><button class='taskButton'>☑</button>\
-            </li>\
-            <li class='taskText'>"+title+"</li><li class='taskButtons'>\
-                <button class='taskButton taskEditButton'>✎</button>\
-            </li>\
-        </ul>\
-    </dd>";
-        $("dl.listHabit dt").after(element);
+    loadNew: function (data) {
+        $("dl.listHabit dt").after(data);
+        $("dl.listHabit dd:first").hide().fadeIn();
+    },
+    addRequest: function () {
+        var habit_title = $("#habit_title").val();
+        if (habit_title === "") {
+            alerta("Please provide the title of the habit.");
+        }
+        else {
+            $.get("addHabit/", {title: habit_title}, function (data) {
+                Tasks.loadNew(data);
+                $("dl.listHabit dt input").val("");
+            })
+        }
     }
 }
