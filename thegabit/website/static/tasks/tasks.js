@@ -15,7 +15,7 @@ var Tasks = {
                     },
                     items: "dd:not(.wontMove)"
                 });
-                $("dl").disableSelection();
+                $("dl#list"+id).disableSelection().hide().fadeIn();
                 if (id == 1)
                     Tasks.loadHelper(0);
                 if (id == 0)
@@ -31,7 +31,7 @@ var Tasks = {
         Tasks.loadHelper(1);
     },
     add: function () {
-        $("#addNewHabit").click(function (event) {
+        $("button.add").click(function (event) {
             event.preventDefault();
             var id = $(this).closest("dl").attr("id");
             Tasks.addRequest(id[4]);
@@ -51,7 +51,7 @@ var Tasks = {
     addRequest: function (type) {
         var habit_title = $("#habit_title"+type).val();
         if (habit_title === "") {
-            alerta("Please provide the title of the habit.");
+            alerta("Write the title of the task");
         }
         else {
             $.get("addHabit/", {title: habit_title, type: type}, function (data) {
