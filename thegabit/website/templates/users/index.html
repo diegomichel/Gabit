@@ -5,7 +5,8 @@
     <script src="{% static 'users/jquery-1.9.1.js' %}"></script>
     <script src="{% static 'users/jquery-ui.js' %}"></script>
     <script src="{% static 'users/common.js' %}"></script>
-    <link rel="stylesheet" href="{% static 'users/style.css' %}"/>
+    <link rel="stylesheet" href="{% static 'users/UsersStyle.css' %}"/>
+    <link rel="stylesheet" href="{% static 'tasks/TasksStyle.css' %}"/>
     <script>
         /* Here i can code everything then move it outside... */
         var loged = false;
@@ -26,7 +27,6 @@
                                 update: function (event, ui) {
                                     var newOrder = $(this).sortable('toArray').toString();
                                     $.get('saveHabitsOrder/', {order: newOrder}, function(result){
-                                        //alert(result);
                                     });
                                 },
                                 items: "dd:not(.wontMove)"

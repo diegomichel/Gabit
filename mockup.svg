@@ -25,16 +25,16 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.979899"
-     inkscape:cx="150.42203"
-     inkscape:cy="1045.841"
+     inkscape:cx="321.20864"
+     inkscape:cy="1014.9132"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="662"
-     inkscape:window-height="523"
-     inkscape:window-x="1772"
-     inkscape:window-y="81"
-     inkscape:window-maximized="0" />
+     inkscape:window-width="1680"
+     inkscape:window-height="987"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
   <metadata
      id="metadata7">
     <rdf:RDF>
@@ -51,6 +51,16 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1">
+    <rect
+       y="-41.81321"
+       x="359.61429"
+       height="32"
+       width="32"
+       id="rect3853"
+       style="fill:none;fill-opacity:1;stroke:none"
+       inkscape:export-filename="C:\Python27\theGabit\mockups\delete.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
     <rect
        style="fill:#f4eed7;fill-opacity:1;stroke:none"
        id="rect2985"
@@ -364,6 +374,64 @@
          d="M 277,-144.6875 261.65625,-129.34375 284.6875,-106.3125 261.65625,-83.3125 277,-67.96875 300,-91 323.03125,-67.96875 338.375,-83.3125 315.375,-106.3125 338.375,-129.34375 323.03125,-144.6875 300,-121.6875 277,-144.6875 z"
          style="fill:#ffffff;fill-opacity:1;stroke:#b3b3b3;stroke-width:1.15867198"
          inkscape:connector-curvature="0" />
+    </g>
+    <rect
+       style="fill:none;fill-opacity:1;stroke:none"
+       id="rect3808"
+       width="32"
+       height="32"
+       x="297.86871"
+       y="-34.994678"
+       inkscape:export-filename="C:\Python27\theGabit\mockups\edit.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <g
+       transform="matrix(0.43116081,0,0,0.43116081,188.77695,13.341009)"
+       id="g3071-5"
+       inkscape:export-filename="C:\Python27\theGabit\mockups\edit.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90">
+      <g
+         transform="matrix(0.70710678,0.70710678,-0.70710678,0.70710678,16.864363,-242.3204)"
+         id="g3099-2">
+        <rect
+           style="fill:#ffffff;fill-opacity:1;stroke:#b3b3b3"
+           id="rect3063-3"
+           width="21.718279"
+           height="64.649765"
+           x="300.26782"
+           y="-114.36401" />
+        <path
+           sodipodi:type="star"
+           style="fill:#ffffff;fill-opacity:1;stroke:#b3b3b3"
+           id="path3065-16"
+           sodipodi:sides="3"
+           sodipodi:cx="301.02545"
+           sodipodi:cy="-45.168556"
+           sodipodi:r1="16.17033"
+           sodipodi:r2="8.085165"
+           sodipodi:arg1="1.5707963"
+           sodipodi:arg2="2.6179939"
+           inkscape:flatsided="true"
+           inkscape:rounded="0"
+           inkscape:randomized="0"
+           d="M 301.02545,-28.998226 287.02153,-53.253721 315.02937,-53.253722 z"
+           inkscape:transform-center-y="3.1677649"
+           transform="matrix(0.78359928,0,0,0.78359928,75.243635,-1.4226182)" />
+      </g>
+    </g>
+    <g
+       transform="matrix(0.40170996,0,0,0.40170996,254.21354,16.191864)"
+       id="g3133-8"
+       inkscape:export-filename="C:\Python27\theGabit\mockups\delete.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90">
+      <path
+         inkscape:connector-curvature="0"
+         id="rect3063-9-8"
+         transform="translate(2.0203048,1.5152293)"
+         d="M 277,-144.6875 261.65625,-129.34375 284.6875,-106.3125 261.65625,-83.3125 277,-67.96875 300,-91 323.03125,-67.96875 338.375,-83.3125 315.375,-106.3125 338.375,-129.34375 323.03125,-144.6875 300,-121.6875 277,-144.6875 z"
+         style="fill:#ffffff;fill-opacity:1;stroke:#b3b3b3;stroke-width:1.15867198" />
     </g>
   </g>
 </svg>
