@@ -32,10 +32,10 @@ var Tasks = {
                 });
                 $("dl#list" + id).disableSelection().hide().fadeIn();
                 if (id == 1)
-                    Tasks.loadHelper(0);
-                if (id == 0)
                     Tasks.loadHelper(2);
-                if (id == 2) {
+                if (id == 2)
+                    Tasks.loadHelper(0);
+                if (id == 0) {
                     Tasks.add();
                     return;
                 }
@@ -45,6 +45,9 @@ var Tasks = {
         if (!loged) return;
         Tasks.loadHelper(1);
     },
+    /*
+        This does not add on call, but add the handler for the events of the buttons that add new tasks.
+     */
     add: function () {
         $("button.add").click(function (event) {
             event.preventDefault();

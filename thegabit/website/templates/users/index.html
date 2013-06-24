@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="{% static 'tasks/TasksStyle.css' %}"/>
     <script>
         /* Here i can code everything then move it outside... */
-
         var loged = false;
         $(function () {
             $("div#trash").droppable({
@@ -19,6 +18,8 @@
                     ui.draggable.get(0).remove();
                 }
             }).hide();
+            $("div#health").hide();
+            $("div#credits").hide();
             User.login();
         });
 
@@ -32,12 +33,16 @@
                         alert(request.responseText);
                     }
                 }).done(function (msg) {
-                            //alert(msg);
-                            if (msg == "True") {
+                            if (msg != "False") {
+                                var user = $.parseJSON(msg);
                                 loged = true;
                                 $("div#header").html("<a id=logoutButton href=#>Logout</a>");
                                 User.logout();
                                 Tasks.load();
+                                $("div#health").fadeIn();
+                                $("div#health span").text(user[0].fields.hp);
+                                $("div#credits").fadeIn();
+                                $("div#credits span").text(user[0].fields.credits);
                             }
                             else {
                                 $.ajax({
@@ -84,6 +89,8 @@
 <div id=content></div>
 <div id=footer>
     <div id=trash><img src="{% static 'tasks/images/fire.png' %}" /></div>
+    <div id=health><span>0</span><img src="{% static 'tasks/images/blood.png' %}" /></div>
+    <div id=credits><span>0</span><img src="{% static 'tasks/images/money.png' %}" /></div>
 </div>
 </body>
 </html>

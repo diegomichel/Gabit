@@ -14,11 +14,11 @@ class UserProfile(models.Model):
     hp = models.IntegerField(default=100)
     credits = models.IntegerField(default=0)
     created_at = models.DateTimeField(default=timezone.now())
-
     def __unicode__(self):
         return "%s's profile" %self.user
     def was_create_recently(self):
         return self.created_at >= timezone.now() - datetime.timedelta(days=1)
+
 def create_user_profile(sender, instance, created, **kwargs):
     if created:
        profile, created = UserProfile.objects.get_or_create(user=instance)
@@ -47,7 +47,6 @@ class Task(models.Model):
     todo = 0
     habit = 1
     daily = 2
-
 
 
     def __unicode__(self):

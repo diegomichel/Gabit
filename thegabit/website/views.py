@@ -11,9 +11,7 @@ from django.template.loader import render_to_string
 
 
 def index(request):
-    latest_user_list = UserProfile.objects.all()
-    context ={'latest_user_list': latest_user_list}
-    return render(request, 'users/index.html', context)
+    return render(request, 'users/index.html', {})
 
 def deleteTask(request):
     id = request.GET['id']
@@ -47,28 +45,26 @@ def saveTasksOrder(request):
         task = User.task_set.filter(pk=id)#.objects.get(pk=id)
         order+=1
         task.update(order = order)
-        print task, order
 
     return render(request, 'users/blank.html', {'value':1})
 
 def loginUser(request):
-    context = {'value': request.user.is_authenticated()}
     if request.user.is_authenticated():
-        return render(request, 'users/blank.html', context)
+        print request.user.get_profile()
+        return HttpResponse(serializers.serialize("json", [request.user.get_profile()]))
 
     try:
         username = request.POST['username']
         password = request.POST['password']
     except NameError:
-        return render(request, 'users/blank.html',context)
+        return HttpResponse(serializers.serialize("json", [request.user.get_profile()]))
 
     user = authenticate(username=username, password=password)
     if user is not None:
         login(request, user)
-        context = {'value':  request.user.is_authenticated() }
-        return render(request, 'users/blank.html',context)
+        return HttpResponse(serializers.serialize("json", [request.user.get_profile()]))
     else:
-        return render(request, 'users/blank.html',context)
+        return HttpResponse("False")
 
 def logoutUser(request):
     context = {'value': True}

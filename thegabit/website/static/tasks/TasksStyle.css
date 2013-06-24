@@ -9,9 +9,8 @@ dt {
     text-align: center;
     padding-bottom: 0.2em;
 }
-
 dl {
-    height: 300px;
+  /*  height: 300px; */
     font-size: 2.5em;
     list-style-type: none;
     padding: 0em 0.4em 0em 0em;
@@ -135,10 +134,36 @@ button.add {
     background: #4DBCE9;
     border: 0.1em #26ADE4 solid;
 }
-
-#trash {
-    padding: 15px;
+#health{
+    width: auto;
+    height: 36px;
+    margin: 0px;
     position: fixed;
     top: 0;
-    right: 100;
+    right: 0;
+}
+#health span {
+    padding-right:3px;
+    font-size: 3.3em;
+    text-shadow: 0.01em 0.01em 0.05em black;
+}
+#credits{
+    width: auto;
+    height: 36px;
+    margin: 0px;
+    position: fixed;
+    top: 36;
+    right: 0;
+}
+#credits span {
+    padding-right:3px;
+    font-size: 3.3em;
+    text-shadow: 0.01em 0.01em 0.05em black;
+}
+#trash {
+    margin: 0px;
+    padding: 0px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
 }
