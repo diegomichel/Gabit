@@ -1,6 +1,6 @@
 {% block listHead %}
-<dl class=listHabit id=list{{ type }} class=sortable>
-    <dt>{% if type == "1" %}Habit's{% endif %}{% if type == "0" %}TODO's{% endif %}{% if type == "2" %}Daily's{% endif %}<br/>
+<dl class={% if type == 4 %}list_reward{% else %}list_habit{% endif %} id=list{{ type }} class=sortable>
+    <dt>{% if type == 4 %}Reward's{% endif %}{% if type == "1" %}Habit's{% endif %}{% if type == "0" %}TODO's{% endif %}{% if type == "2" %}Daily's{% endif %}<br/>
         <input class=add id=habit_title{{ type }} type=text/><button id=addNewHabit class=add>+</button>
     </dt>
 {% endblock listHead%}

@@ -1,8 +1,46 @@
 var Tasks = {
     delete: function (id) {
-        $.get("deleteTask/", {id: id}).fail(function () {
-            location.reload();
-        })
+        var parentId = $(id).closest("dl").attr("id");
+        if (parentId[4] == 4) {
+            $.get("deleteReward/", {id: id.id}).fail(function () {
+                location.reload();
+            })
+        }
+        else {
+            $.get("deleteTask/", {id: id.id}).fail(function () {
+                location.reload();
+            })
+        }
+    },
+    loadRewards: function () {
+        $.ajax({
+            type: "GET",
+            url: "getRewards",
+            data: {}
+        }).done(function (response) {
+                $("div#content").append(response);
+
+                $("dl").sortable({
+                    activate: function (event, ui) {
+                        $("div#trash").fadeIn();
+                    },
+                    deactivate: function (event, ui) {
+                        $("div#trash").fadeOut();
+                    },
+                    update: function (event, ui) {
+                        var newOrder = $(this).sortable('toArray').toString();
+                        if (newOrder == "") return;
+
+                        $.get('saveRewardsOrder/', {order: newOrder},function (result) {
+                        }).fail(function () {
+                                location.reload();
+                            });
+                    },
+                    items: "dd:not(.wontMove)"
+                });
+                $("dl#list4").disableSelection().hide().fadeIn();
+                Tasks.add();
+            })
     },
     loadHelper: function (id) {
         $.ajax({
@@ -36,7 +74,7 @@ var Tasks = {
                 if (id == 2)
                     Tasks.loadHelper(0);
                 if (id == 0) {
-                    Tasks.add();
+                    Tasks.loadRewards();
                     return;
                 }
             })
@@ -46,7 +84,7 @@ var Tasks = {
         Tasks.loadHelper(1);
     },
     /*
-        This does not add on call, but add the handler for the events of the buttons that add new tasks.
+     This does not add on call, but add the handler for the events of the buttons that add new tasks.
      */
     add: function () {
         $("button.add").click(function (event) {
@@ -54,7 +92,7 @@ var Tasks = {
             var id = $(this).closest("dl").attr("id");
             Tasks.addRequest(id[4]);
         });
-        $("dl.listHabit dt input").keypress(function (event) {
+        $("dl.list_habit dt input, dl.list_reward dt input").keypress(function (event) {
             if (event.which == 13) {
                 event.preventDefault();
                 var id = $(this).closest("dl").attr("id");
@@ -69,20 +107,35 @@ var Tasks = {
     addRequest: function (type) {
         var habit_title = $("#habit_title" + type).val();
         if (habit_title === "") {
-            alerta("Write the title of the task");
+            alerta("Please write something.");
         }
         else {
-            $.get("addTask/",
-                {
-                    title: habit_title,
-                    type: type
-                },
-                function (data) {
-                    Tasks.loadNew(data, type);
-                    $("dl.listHabit dt input").val("");
-                }).fail(function () {
-                    location.reload();
-                })
+            if (type == 4) {
+                $.get("addReward/",
+                    {
+                        title: habit_title,
+                        type: type
+                    },
+                    function (data) {
+                        Tasks.loadNew(data, type);
+                        $("dl.listHabit dt input").val("");
+                    }).fail(function () {
+                        location.reload();
+                    })
+            }
+            else {
+                $.get("addTask/",
+                    {
+                        title: habit_title,
+                        type: type
+                    },
+                    function (data) {
+                        Tasks.loadNew(data, type);
+                        $("dl.listHabit dt input").val("");
+                    }).fail(function () {
+                        location.reload();
+                    })
+            }
         }
     }
 }

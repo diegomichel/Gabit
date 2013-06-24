@@ -1,7 +1,7 @@
 # Create your views here.
 from django.contrib.auth import authenticate, login, logout
 from django.http import HttpResponse
-from website.models import UserProfile,Task
+from website.models import UserProfile,Task, Reward
 from django.template import Context, loader
 from django.shortcuts import render
 import string
@@ -19,10 +19,21 @@ def deleteTask(request):
     task.delete();
     return HttpResponse("")
 
+def deleteReward(request):
+    id = request.GET['id']
+    reward = request.user.reward_set.filter(pk=id)
+    reward.delete();
+    return HttpResponse("")
+
 def getTasks(request):
     type = request.GET['type']
     tasks = Task.objects.filter(user__pk=request.user.pk,type=type).order_by('order', '-id')
     context ={'tasks': tasks, 'all': True, 'type': type}
+    return render(request, 'tasks/task.html', context)
+
+def getRewards(request):
+    rewards = Reward.objects.filter(user__pk=request.user.pk).order_by('order', '-id')
+    context ={'tasks': rewards, 'all': True, 'type': 4}
     return render(request, 'tasks/task.html', context)
 
 def addTask(request):
@@ -36,6 +47,17 @@ def addTask(request):
     rendered = rendered.strip()
     return HttpResponse(rendered)
 
+def addReward(request):
+    title = request.GET['title']
+    type = request.GET['type']
+    User = request.user;
+    reward = User.reward_set.create(title = title)
+    rewards = [reward]
+    context ={'tasks': rewards, 'all': False}
+    rendered = render_to_string('tasks/task.html', context)
+    rendered = rendered.strip()
+    return HttpResponse(rendered)
+
 def saveTasksOrder(request):
     order = request.GET['order']
     ids = string.split(order,",")
@@ -45,6 +67,18 @@ def saveTasksOrder(request):
         task = User.task_set.filter(pk=id)#.objects.get(pk=id)
         order+=1
         task.update(order = order)
+
+    return render(request, 'users/blank.html', {'value':1})
+
+def saveRewardsOrder(request):
+    order = request.GET['order']
+    ids = string.split(order,",")
+    User = request.user;
+    order = 0;
+    for id in ids:
+        reward = User.reward_set.filter(pk=id)#.objects.get(pk=id)
+        order+=1
+        reward.update(order = order)
 
     return render(request, 'users/blank.html', {'value':1})
 
