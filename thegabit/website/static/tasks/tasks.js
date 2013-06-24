@@ -1,4 +1,9 @@
 var Tasks = {
+    delete: function (id) {
+        $.get("deleteTask/", {id: id}).fail(function () {
+            location.reload();
+        })
+    },
     loadHelper: function (id) {
         $.ajax({
             type: "GET",
@@ -8,14 +13,24 @@ var Tasks = {
                 $("div#content").append(response);
 
                 $("dl").sortable({
+                    activate: function (event, ui) {
+                        $("div#trash").fadeIn();
+                    },
+                    deactivate: function (event, ui) {
+                        $("div#trash").fadeOut();
+                    },
                     update: function (event, ui) {
                         var newOrder = $(this).sortable('toArray').toString();
-                        $.get('saveTasksOrder/', {order: newOrder}, function (result) {
-                        });
+                        if (newOrder == "") return;
+
+                        $.get('saveTasksOrder/', {order: newOrder},function (result) {
+                        }).fail(function () {
+                                location.reload();
+                            });
                     },
                     items: "dd:not(.wontMove)"
                 });
-                $("dl#list"+id).disableSelection().hide().fadeIn();
+                $("dl#list" + id).disableSelection().hide().fadeIn();
                 if (id == 1)
                     Tasks.loadHelper(0);
                 if (id == 0)
@@ -45,19 +60,26 @@ var Tasks = {
         });
     },
     loadNew: function (data, type) {
-        $("#list"+type+" dt").after(data);
-        $("#list"+type+" dd:first").hide().fadeIn();
+        $("#list" + type + " dt").after(data);
+        $("#list" + type + " dd:first").hide().fadeIn();
     },
     addRequest: function (type) {
-        var habit_title = $("#habit_title"+type).val();
+        var habit_title = $("#habit_title" + type).val();
         if (habit_title === "") {
             alerta("Write the title of the task");
         }
         else {
-            $.get("addHabit/", {title: habit_title, type: type}, function (data) {
-                Tasks.loadNew(data, type);
-                $("dl.listHabit dt input").val("");
-            })
+            $.get("addTask/",
+                {
+                    title: habit_title,
+                    type: type
+                },
+                function (data) {
+                    Tasks.loadNew(data, type);
+                    $("dl.listHabit dt input").val("");
+                }).fail(function () {
+                    location.reload();
+                })
         }
     }
 }

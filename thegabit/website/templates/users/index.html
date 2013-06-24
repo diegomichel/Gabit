@@ -10,8 +10,15 @@
     <link rel="stylesheet" href="{% static 'tasks/TasksStyle.css' %}"/>
     <script>
         /* Here i can code everything then move it outside... */
+
         var loged = false;
         $(function () {
+            $("div#trash").droppable({
+                drop: function (event, ui) {
+                    Tasks.delete(ui.draggable.get(0).id);
+                    ui.draggable.get(0).remove();
+                }
+            }).hide();
             User.login();
         });
 
@@ -56,7 +63,7 @@
                         url: "logout"
                     }).done(function (msg) {
                                 $(this).hide();
-                                location.loadNew();
+                                location.reload();
                             })
                 });
             }
@@ -75,6 +82,8 @@
 <body>
 <div id=header></div>
 <div id=content></div>
-<div id=footer></div>
+<div id=footer>
+    <div id=trash><img src="{% static 'tasks/images/fire.png' %}" /></div>
+</div>
 </body>
 </html>

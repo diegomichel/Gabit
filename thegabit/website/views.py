@@ -15,13 +15,19 @@ def index(request):
     context ={'latest_user_list': latest_user_list}
     return render(request, 'users/index.html', context)
 
+def deleteTask(request):
+    id = request.GET['id']
+    task = request.user.task_set.filter(pk=id)
+    task.delete();
+    return HttpResponse("")
+
 def getTasks(request):
     type = request.GET['type']
     tasks = Task.objects.filter(user__pk=request.user.pk,type=type).order_by('order', '-id')
     context ={'tasks': tasks, 'all': True, 'type': type}
     return render(request, 'tasks/task.html', context)
 
-def addHabit(request):
+def addTask(request):
     title = request.GET['title']
     type = request.GET['type']
     User = request.user;
@@ -32,7 +38,7 @@ def addHabit(request):
     rendered = rendered.strip()
     return HttpResponse(rendered)
 
-def saveHabitsOrder(request):
+def saveTasksOrder(request):
     order = request.GET['order']
     ids = string.split(order,",")
     User = request.user;
@@ -69,3 +75,4 @@ def logoutUser(request):
     if request.user.is_authenticated():
         logout(request)
         return render(request, 'users/blank.html', context)
+    return render(request, 'users/blank.html', context)

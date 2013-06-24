@@ -10,8 +10,9 @@ urlpatterns = patterns('',
     url(r'^login$',  'website.views.loginUser', name='loginUser'),
     url(r'^logout$',  'website.views.logoutUser', name='logoutUser'),
     url(r'^gettasks$', 'website.views.getTasks', name='getHabits'),
-    url(r'^saveTasksOrder/$',  'website.views.saveHabitsOrder', name='saveHabitsOrder'),
-    url(r'^addHabit/$',  'website.views.addHabit', name='addHabit'),
+    url(r'^saveTasksOrder/$', 'website.views.saveTasksOrder', name='saveHabitsOrder'),
+    url(r'^addTask/$', 'website.views.addTask', name='addTask'),
+    url(r'^deleteTask/$', 'website.views.deleteTask', name='deleteTask'),
 
     (r'^accounts/login/$', 'django.contrib.auth.views.login'),
 
