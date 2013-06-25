@@ -1,4 +1,5 @@
 {% extends "tasks/habits.html" %}
+{% load staticfiles %}
 {% block listHead %}
 {% if all %}
     {{ block.super }}
@@ -11,7 +12,7 @@
         <dd class=task id={{ task.id }}>
         <ul>
             {% if task.cost %}<li class=taskHit>
-                <img src=http://127.0.0.1:8000/static/tasks/images/dolars.png /><span>{{ task.cost }}</span>
+                <img src={% static 'tasks/images/dolars.png' %} /><span>{{ task.cost }}</span>
             </li>{% endif %}
             <li class=taskText>{{ task.title }}</li>
         </ul>

@@ -1,3 +1,4 @@
+{% load staticfiles %}
 {% block listHead %}
 <dl class={% if type == 4 %}list_reward{% else %}list_habit{% endif %} id=list{{ type }} class=sortable>
     <dt>{% if type == 4 %}Reward's{% endif %}{% if type == "1" %}Habit's{% endif %}{% if type == "0" %}TODO's{% endif %}{% if type == "2" %}Daily's{% endif %}<br/>
@@ -10,7 +11,7 @@
         <dd class=task id={{ task.id }}>
         <ul>
             {% if task.cost %}<li class=taskHit>
-                <img src=http://127.0.0.1:8000/static/tasks/images/dolars.png /><span>{{ task.cost }}</span>
+                <img src={% static 'tasks/images/dolars.png' %} /><span>{{ task.cost }}</span>
             </li>{% endif %}
             <li class=taskText>{{ task.title }}</li>
         </ul>

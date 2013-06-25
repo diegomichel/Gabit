@@ -3,17 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="8e1279c9-bbe4-4643-9e7a-6572857d06f1" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/theGabit2.db" afterPath="$PROJECT_DIR$/theGabit2.db" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website/static/users/images/ui-bg_flat_0_aaaaaa_40x100.png" afterPath="$PROJECT_DIR$/website/static/users/images/ui-bg_flat_0_aaaaaa_40x100.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website/static/users/images/ui-bg_flat_75_ffffff_40x100.png" afterPath="$PROJECT_DIR$/website/static/users/images/ui-bg_flat_75_ffffff_40x100.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website/static/users/images/ui-icons_222222_256x240.png" afterPath="$PROJECT_DIR$/website/static/users/images/ui-icons_222222_256x240.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website/static/users/images/ui-icons_2e83ff_256x240.png" afterPath="$PROJECT_DIR$/website/static/users/images/ui-icons_2e83ff_256x240.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website/static/users/images/ui-icons_454545_256x240.png" afterPath="$PROJECT_DIR$/website/static/users/images/ui-icons_454545_256x240.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website/static/users/images/ui-icons_888888_256x240.png" afterPath="$PROJECT_DIR$/website/static/users/images/ui-icons_888888_256x240.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website/static/users/images/ui-icons_cd0a0a_256x240.png" afterPath="$PROJECT_DIR$/website/static/users/images/ui-icons_cd0a0a_256x240.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website/static/tasks/TasksStyle.css" afterPath="$PROJECT_DIR$/website/static/tasks/TasksStyle.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website/templates/tasks/habits.html" afterPath="$PROJECT_DIR$/website/templates/tasks/habits.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website/templates/users/index.html" afterPath="$PROJECT_DIR$/website/templates/users/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website/models.py" afterPath="$PROJECT_DIR$/website/models.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website/templates/tasks/task.html" afterPath="$PROJECT_DIR$/website/templates/tasks/task.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../mockups/tasks.html" afterPath="$PROJECT_DIR$/../mockups/tasks.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -70,7 +60,7 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/website/templates/users/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="70" selection-start="107" selection-end="107" vertical-scroll-proportion="-1.0">
+            <state line="91" column="67" selection-start="3662" selection-end="3700" vertical-scroll-proportion="-6.5882354">
               <folding />
             </state>
           </provider>
@@ -119,7 +109,7 @@
       <file leaf-file-name="tasks.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../mockups/tasks.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="112" column="201" selection-start="3989" selection-end="3989" vertical-scroll-proportion="-5.901961">
+            <state line="112" column="165" selection-start="3953" selection-end="3953" vertical-scroll-proportion="-7.54902">
               <folding />
             </state>
           </provider>
@@ -128,7 +118,7 @@
       <file leaf-file-name="task.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/website/templates/tasks/task.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="27" selection-start="287" selection-end="287" vertical-scroll-proportion="0.28451884">
+            <state line="14" column="16" selection-start="348" selection-end="398" vertical-scroll-proportion="0.37598735">
               <folding />
             </state>
           </provider>
@@ -137,7 +127,7 @@
       <file leaf-file-name="habits.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/website/templates/tasks/habits.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="27" selection-start="578" selection-end="578" vertical-scroll-proportion="-7.1923075">
+            <state line="13" column="66" selection-start="689" selection-end="689" vertical-scroll-proportion="-8.5">
               <folding />
             </state>
           </provider>
@@ -175,14 +165,16 @@
         <option value="$PROJECT_DIR$/website/models.py" />
         <option value="$PROJECT_DIR$/website/static/tasks/TasksStyle.css" />
         <option value="$PROJECT_DIR$/../mockups/tasks.html" />
-        <option value="$PROJECT_DIR$/website/templates/tasks/habits.html" />
         <option value="$PROJECT_DIR$/website/templates/tasks/task.html" />
+        <option value="$PROJECT_DIR$/website/templates/tasks/habits.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="width" value="840" />
-    <option name="height" value="1010" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1696" />
+    <option name="height" value="1026" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -575,20 +567,20 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="840" height="1010" extended-state="1" />
+    <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.05529412" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.054272518" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26349613" sideWeight="0.9447059" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.125459" sideWeight="0.94572747" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297619" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20900694" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20900694" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -741,20 +733,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/website/templates/users/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="70" selection-start="107" selection-end="107" vertical-scroll-proportion="-1.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../mockups/tasks.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="112" column="201" selection-start="3989" selection-end="3989" vertical-scroll-proportion="-5.901961">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/website/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="36" column="54" selection-start="1227" selection-end="1227" vertical-scroll-proportion="-24.48">
@@ -764,16 +742,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../mockups/tasks.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="112" column="165" selection-start="3953" selection-end="3953" vertical-scroll-proportion="-7.54902">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website/templates/users/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="91" column="67" selection-start="3662" selection-end="3700" vertical-scroll-proportion="-6.5882354">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/website/templates/tasks/habits.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="27" selection-start="578" selection-end="578" vertical-scroll-proportion="-7.1923075">
+        <state line="13" column="66" selection-start="689" selection-end="689" vertical-scroll-proportion="-8.5">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/website/templates/tasks/task.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="27" selection-start="287" selection-end="287" vertical-scroll-proportion="0.28451884">
+        <state line="14" column="16" selection-start="348" selection-end="398" vertical-scroll-proportion="0.37598735">
           <folding />
         </state>
       </provider>
