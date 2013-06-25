@@ -84,7 +84,6 @@ li.taskhit span{
     text-shadow: 0.01em 0.01em 0.1em black;
     padding-right: 1em;
 }
-
 li.taskText {
     font-size: 0.6em;
     margin-left: -0.3em;
@@ -176,4 +175,30 @@ button.add {
 #header{
     margin:0px;
     height: 128px;
+}
+.validateTips{
+    text-align: center;
+}
+/*
+* UI FIXES
+*/
+.ui-dialog .ui-dialog-titlebar-close, .ui-dialog-titlebar{
+  display: none;
+}
+.ui-dialog .ui-dialog-title {
+    width: 100%;
+}
+.ui-dialog-titlebar {
+text-align: center;
+}
+.ui-widget-overlay {
+background: black;
+}
+.ui-icon, .ui-widget-content .ui-icon, .ui-widget-header .ui-icon {
+background: none;
+}
+/*
+*/
+fieldset{
+    border: 0px;
 }

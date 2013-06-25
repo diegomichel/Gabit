@@ -104,38 +104,35 @@ var Tasks = {
         $("#list" + type + " dt").after(data);
         $("#list" + type + " dd:first").hide().fadeIn();
     },
+    addTask: function (type, title, gain) {
+        if (type == 4) {
+            var url = "addReward/";
+        }
+        else {
+            var url = "addTask/";
+        }
+
+        $.get(url,
+            {
+                title: title,
+                type: type,
+                gain: gain
+            },
+            function (data) {
+                Tasks.loadNew(data, type);
+                $("dl.listHabit dt input").val("");
+            }).fail(function () {
+                location.reload();
+            })
+
+    },
     addRequest: function (type) {
         var habit_title = $("#habit_title" + type).val();
         if (habit_title === "") {
             alerta("Please write something.");
         }
         else {
-            if (type == 4) {
-                $.get("addReward/",
-                    {
-                        title: habit_title,
-                        type: type
-                    },
-                    function (data) {
-                        Tasks.loadNew(data, type);
-                        $("dl.listHabit dt input").val("");
-                    }).fail(function () {
-                        location.reload();
-                    })
-            }
-            else {
-                $.get("addTask/",
-                    {
-                        title: habit_title,
-                        type: type
-                    },
-                    function (data) {
-                        Tasks.loadNew(data, type);
-                        $("dl.listHabit dt input").val("");
-                    }).fail(function () {
-                        location.reload();
-                    })
-            }
+            $("div#dialogAddTask").data('type', type).data('habit_title', habit_title).dialog("open");
         }
     }
 }

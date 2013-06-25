@@ -39,8 +39,9 @@ def getRewards(request):
 def addTask(request):
     title = request.GET['title']
     type = request.GET['type']
+    gain = request.GET['gain']
     User = request.user;
-    task = User.task_set.create(title = title, type = type)
+    task = User.task_set.create(title=title, type=type, value=gain)
     tasks = [task]
     context ={'tasks': tasks, 'all': False}
     rendered = render_to_string('tasks/task.html', context)
@@ -49,9 +50,9 @@ def addTask(request):
 
 def addReward(request):
     title = request.GET['title']
-    type = request.GET['type']
+    cost = request.GET['gain']
     User = request.user;
-    reward = User.reward_set.create(title = title)
+    reward = User.reward_set.create(title=title,cost=cost)
     rewards = [reward]
     context ={'tasks': rewards, 'all': False}
     rendered = render_to_string('tasks/task.html', context)

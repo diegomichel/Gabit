@@ -1,7 +1,7 @@
 <html>
 {% load staticfiles %}
 <head>
-    <link rel="stylesheet" href="{% static 'users/jquery-ui-custom.min.css' %}"/>
+    <link rel="stylesheet" href="{% static 'users/jquery-ui.css' %}"/>
     <script src="{% static 'users/jquery-1.9.1.js' %}"></script>
     <script src="{% static 'users/jquery-ui.js' %}"></script>
     <script src="{% static 'users/common.js' %}"></script>
@@ -22,6 +22,7 @@
             $("div#credits").hide();
             $("div#avatar").hide();
             $("div#userOptions").hide();
+            initDialogs();
             User.login();
         });
 
@@ -98,5 +99,23 @@
 <div id=footer>
     <div id=trash><img src="{% static 'tasks/images/fire.png' %}" /></div>
 </div>
+
+<div id=dialogAddTask title="New Task">
+    <p class="validateTips">positive number for good habits, negative number for bad habits.</p>
+    <dl class="list_habit ui-sortable" id="list2" style="display: inline-block;">
+    <dd class="task" id="44" style="zoom: 0.7">
+        <ul>
+            <li class="taskText">This is a task u need to do :D</li>
+        </ul>
+        </dd>
+        </dl>
+    <form name=formDialogAddTask>
+    <fieldset>
+        <label for="value">Gain</label>
+        <input value=10 type="text" name="value" id="value" class="text ui-widget-content ui-corner-all" />
+    </fieldset>
+  </form>
+</div>
+
 </body>
 </html>
