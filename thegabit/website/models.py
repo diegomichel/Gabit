@@ -56,7 +56,7 @@ class Task(models.Model):
 class Reward(models.Model):
     user = models.ForeignKey(User)
     title = models.CharField(max_length=117)
-    cost = models.IntegerField(default=1000)
+    cost = models.IntegerField(default=10)
     order = models.IntegerField(default=0)
     created_at = models.DateTimeField(default=timezone.now())
     expire_at = models.DateTimeField(default=timezone.now(),blank=True)

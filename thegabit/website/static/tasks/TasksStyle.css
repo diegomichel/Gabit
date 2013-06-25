@@ -16,7 +16,7 @@ dl {
     padding: 0em 0.4em 0em 0em;
     display: inline-block;
     width: 23%;
-    min-width: 11em;
+    min-width: 10.8em;
     vertical-align: top;
 }
 
@@ -73,19 +73,25 @@ li.taskButtons {
 }
 
 li.taskhit {
-    float: left;
-    width: 20%;
-    min-width: 3.8em;
+    float: right;
     margin-top: -0.17em;
+    padding-bottom:5px;
+}
+li.taskhit span{
+    position: relative;
+    top: -0.8em;
+    font-size: 0.6em;
+    text-shadow: 0.01em 0.01em 0.1em black;
+    padding-right: 1em;
 }
 
 li.taskText {
     font-size: 0.6em;
     margin-left: -0.3em;
     min-width: 6.2em;
-    width: 57%;
-    padding: 0.3em 0em 0.3em 0.3em;
+    padding: 0.7em 0em 0.3em 0.7em;
     margin-right: 0em;
+    text-shadow: 0.01em 0.01em 0.1em black;
 }
 
 button.taskdeletebutton {
@@ -132,7 +138,7 @@ button.add {
 
 .list_reward .task {
     background: #4DBCE9;
-    border: 0.1em #26ADE4 solid;
+    border: 0.1em rgb(8, 115, 175) solid;
 }
 #health{
     width: auto;
@@ -166,4 +172,8 @@ button.add {
     position: fixed;
     bottom: 0;
     right: 0;
+}
+#header{
+    margin:0px;
+    height: 128px;
 }

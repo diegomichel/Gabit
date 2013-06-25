@@ -9,12 +9,10 @@
     {% for task in tasks %}
         <dd class=task id={{ task.id }}>
         <ul>
-            <li class=taskHit>
-                <button class="taskButton">☒</button><button class="taskButton">☑</button>
-            </li>
-            <li class=taskText>{{ task.title }}</li><li class=taskButtons>
-                <button class="taskButton taskEditButton">✎</button>
-            </li>
+            {% if task.cost %}<li class=taskHit>
+                <img src=http://127.0.0.1:8000/static/tasks/images/dolars.png /><span>{{ task.cost }}</span>
+            </li>{% endif %}
+            <li class=taskText>{{ task.title }}</li>
         </ul>
     </dd>
     {% endfor %}

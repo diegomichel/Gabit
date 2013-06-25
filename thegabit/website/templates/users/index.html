@@ -1,7 +1,7 @@
 <html>
 {% load staticfiles %}
 <head>
-    <link rel="stylesheet" href="{% static 'users/jquery-ui.css' %}"/>
+    <link rel="stylesheet" href="{% static 'users/jquery-ui-custom.min.css' %}"/>
     <script src="{% static 'users/jquery-1.9.1.js' %}"></script>
     <script src="{% static 'users/jquery-ui.js' %}"></script>
     <script src="{% static 'users/common.js' %}"></script>
@@ -20,6 +20,8 @@
             }).hide();
             $("div#health").hide();
             $("div#credits").hide();
+            $("div#avatar").hide();
+            $("div#userOptions").hide();
             User.login();
         });
 
@@ -36,13 +38,14 @@
                             if (msg != "False") {
                                 var user = $.parseJSON(msg);
                                 loged = true;
-                                $("div#header").html("<a id=logoutButton href=#>Logout</a>");
+                                $("div#userOptions").append("<a id=logoutButton href=#>Logout</a>");
                                 User.logout();
                                 Tasks.load();
                                 $("div#health").fadeIn();
                                 $("div#health span").text(user[0].fields.hp);
                                 $("div#credits").fadeIn();
                                 $("div#credits span").text(user[0].fields.credits);
+                                $("div#avatar").fadeIn();
                             }
                             else {
                                 $.ajax({
@@ -85,12 +88,15 @@
     </script>
 </head>
 <body>
-<div id=header></div>
+<div id=header>
+    <div id=avatar><img src="{% static 'users/images/avatar.png' %}" /></div>
+    <div id=health><span>0</span><img src="{% static 'tasks/images/blood.png' %}" /></div>
+    <div id=credits><span>0</span><img src="{% static 'tasks/images/money.png' %}" /></div>
+    <div id=userOptions></div>
+</div>
 <div id=content></div>
 <div id=footer>
     <div id=trash><img src="{% static 'tasks/images/fire.png' %}" /></div>
-    <div id=health><span>0</span><img src="{% static 'tasks/images/blood.png' %}" /></div>
-    <div id=credits><span>0</span><img src="{% static 'tasks/images/money.png' %}" /></div>
 </div>
 </body>
 </html>
