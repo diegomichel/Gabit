@@ -41,7 +41,7 @@ class Task(models.Model):
     damage = models.IntegerField(default=10)
     order = models.IntegerField(default=0)
     priority = models.IntegerField(default=0)
-    completed_at = models.DateTimeField('completed at',blank=True,default=timezone.now())
+    completed_at = models.DateTimeField('completed at',blank=True,default=timezone.now() - datetime.timedelta(days=365))
     created_at = models.DateTimeField(default=timezone.now())
 
     todo = 0
@@ -51,6 +51,9 @@ class Task(models.Model):
 
     def __unicode__(self):
         return self.title
+
+    def completed_today(self):
+        return self.completed_at >= timezone.now() - datetime.timedelta(days=1)
 
 
 class Reward(models.Model):

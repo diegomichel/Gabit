@@ -29,7 +29,9 @@ dd.task {
     background-color: #CBE86B;
     display: block;
 }
-
+dd.taskDone{
+    background-color: rgb(177, 177, 177);
+}
 .taskButton {
     font-size: 1.2em;
     background: none;
@@ -139,7 +141,7 @@ button.add {
     background: #4DBCE9;
     border: 0.1em rgb(8, 115, 175) solid;
 }
-#health{
+#hp{
     width: auto;
     height: 36px;
     margin: 0px;
@@ -147,7 +149,7 @@ button.add {
     top: 0;
     right: 0;
 }
-#health span {
+#hp span {
     padding-right:3px;
     font-size: 3.3em;
     text-shadow: 0.01em 0.01em 0.05em black;
@@ -165,12 +167,23 @@ button.add {
     font-size: 3.3em;
     text-shadow: 0.01em 0.01em 0.05em black;
 }
-#trash {
+#footer {
     margin: 0px;
     padding: 0px;
     position: fixed;
     bottom: 0;
-    right: 0;
+    right: 10;
+    max-height: 128px;
+}
+#trash{
+}
+.button{
+    background: blue;
+    width: 128px;
+    height: 128px;
+}
+.buttonHover{
+    zoom: 1.1;
 }
 #header{
     margin:0px;

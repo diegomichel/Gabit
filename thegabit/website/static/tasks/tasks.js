@@ -12,6 +12,42 @@ var Tasks = {
             })
         }
     },
+    complete: function (id) {
+        $.get("completeTask/",
+            {id: id.id},
+            function (data) {
+                var values = $.parseJSON(data);
+                console.log(values.credits);
+                $("#credits span").html(values.credits);
+                $("#hp span").html(values.hp);
+            }
+        ).fail(function () {
+                location.reload();
+            })
+    },
+    buyReward: function (id) {
+        var credits = parseInt($("#credits span").html());
+        var cost = parseInt($("dd#"+id.id+" ul li span").html());
+        if(cost > credits){
+            alerta("You dont have enougth credit's, try completing some habit's");
+            return;
+        }
+        if(id.id == 1 && parseInt($("#hp span").html()) == 100)
+        {
+            alerta("You'r hp is full");
+            return;
+        }
+        $.get("buyReward/",
+            {id: id.id},
+            function (data) {
+                var values = $.parseJSON(data);
+                $("#credits span").html(values.credits);
+                $("#hp span").html(values.hp);
+            }
+        ).fail(function () {
+                location.reload();
+            })
+    },
     loadRewards: function () {
         $.ajax({
             type: "GET",
@@ -20,16 +56,20 @@ var Tasks = {
         }).done(function (response) {
                 $("div#content").append(response);
 
-                $("dl").sortable({
+                $("dl#list4").sortable({
+                    containment: "document",
                     activate: function (event, ui) {
-                        $("div#trash").fadeIn();
+                        $("#trash").fadeIn();
+                        $("#reward").fadeIn();
                     },
                     deactivate: function (event, ui) {
-                        $("div#trash").fadeOut();
+                        $("#trash").fadeOut();
+                        $("#reward").fadeOut();
                     },
                     update: function (event, ui) {
                         var newOrder = $(this).sortable('toArray').toString();
                         if (newOrder == "") return;
+
 
                         $.get('saveRewardsOrder/', {order: newOrder},function (result) {
                         }).fail(function () {
@@ -52,10 +92,12 @@ var Tasks = {
 
                 $("dl").sortable({
                     activate: function (event, ui) {
-                        $("div#trash").fadeIn();
+                        $("#trash").fadeIn();
+                        $("#completed").fadeIn();
                     },
                     deactivate: function (event, ui) {
-                        $("div#trash").fadeOut();
+                        $("#trash").fadeOut();
+                        $("#completed").fadeOut();
                     },
                     update: function (event, ui) {
                         var newOrder = $(this).sortable('toArray').toString();
