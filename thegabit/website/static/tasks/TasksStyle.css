@@ -32,6 +32,9 @@ dd.task {
 dd.taskDone{
     background-color: rgb(177, 177, 177);
 }
+dl#list1 dd.taskDone{
+    background-color: rgb(230, 255, 109);
+}
 .taskButton {
     font-size: 1.2em;
     background: none;
@@ -94,7 +97,9 @@ li.taskText {
     margin-right: 0em;
     text-shadow: 0.01em 0.01em 0.1em black;
 }
-
+dd.wontMove{
+    background-color: black;
+}
 button.taskdeletebutton {
     background: url('delete.png') no-repeat;
 }
@@ -178,7 +183,6 @@ button.add {
 #trash{
 }
 .button{
-    background: blue;
     width: 128px;
     height: 128px;
 }

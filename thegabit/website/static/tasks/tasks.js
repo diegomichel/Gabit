@@ -17,7 +17,6 @@ var Tasks = {
             {id: id.id},
             function (data) {
                 var values = $.parseJSON(data);
-                console.log(values.credits);
                 $("#credits span").html(values.credits);
                 $("#hp span").html(values.hp);
             }
@@ -108,7 +107,7 @@ var Tasks = {
                                 location.reload();
                             });
                     },
-                    items: "dd:not(.wontMove)"
+                    items: "dd"
                 });
                 $("dl#list" + id).disableSelection().hide().fadeIn();
                 if (id == 1)

@@ -63,3 +63,11 @@ function initDialogs() {
         return false;
     });
 }
+function makeDarker(obj){
+            var tmpString = obj.css("background-color").substring(4,17);
+            var values = tmpString.split(",");
+            var red = parseInt(parseInt(values[0]) * 1.20);
+            var green = parseInt(parseInt(values[1]) * 1.20);
+            var blue = parseInt(parseInt(values[2]) * 1.20);
+            obj.css("background-color","rgb("+red+","+green+","+blue+")");
+}

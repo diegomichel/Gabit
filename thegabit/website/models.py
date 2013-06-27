@@ -38,11 +38,11 @@ class Task(models.Model):
     title = models.CharField(max_length=117)
     value = models.IntegerField(default=10)
     type = models.IntegerField(default=0)
-    damage = models.IntegerField(default=10)
     order = models.IntegerField(default=0)
     priority = models.IntegerField(default=0)
-    completed_at = models.DateTimeField('completed at',blank=True,default=timezone.now() - datetime.timedelta(days=365))
+    completed_at = models.DateTimeField(blank=True, null=True)
     created_at = models.DateTimeField(default=timezone.now())
+    repeat_rate = models.IntegerField(default=0)
 
     todo = 0
     habit = 1
