@@ -18,20 +18,22 @@ $(function () {
         },
         open: function (event, ui) {
             $("#tickSound")[0].play();
+            $("div#dialog-timer").data("opened", true);
             $(this).append("<div id=countdown></div>");
-                $('#countdown').timeTo(0.1 * 60, {
+                $('#countdown').timeTo(parseInt($("input#minutes").val()) * 60, {
                     theme: "white",
                     displayCaptions: true,
                     fontSize: 48,
                     captionSize: 14
                 }, function () {
+                    if($("div#dialog-timer").data("opened") == false) return; //BUG.uglyhack: This executes two times, i  guess is a bug on timeTo function...
                     $("#alarmSound")[0].play();
                     $("#tickSound")[0].pause();
                     alert("Time Out!"); //This instead of alerta because this one focuses the tab ;)
-                    alerta("Timer Out!");
                     $("#alarmSound")[0].pause();
-                    console.log("timer done!");
                     $("div#dialog-timer").dialog("close");
+                    $('#countdown').remove();
+                    $("div#dialog-timer").data("opened", false);
                 });
 
         },
