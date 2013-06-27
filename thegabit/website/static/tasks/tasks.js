@@ -167,7 +167,7 @@ var Tasks = {
             })
 
     },
-    addRequest: function (type) {
+   addRequest: function (type) {
         var habit_title = $("#habit_title" + type).val();
         if (habit_title === "") {
             alerta("Please write something.");

@@ -44,6 +44,9 @@ dl#list1 dd.taskDone{
     padding: 0em;
     margin: 0.05em 0em 0em;
 }
+.hidden{
+    visibility: hidden;
+}
 
 .taskHit button.taskButton:hover {
     background: none;
@@ -218,4 +221,9 @@ background: none;
 */
 fieldset{
     border: 0px;
+}
+#timer{
+    position: absolute;
+    right: 128;
+    top:0;
 }

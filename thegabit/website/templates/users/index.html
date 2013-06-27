@@ -7,8 +7,11 @@
     <script src="{% static 'users/common.js' %}"></script>
     <script src="{% static 'tasks/tasks.js' %}"></script>
     <script src="{% static 'tasks/tasksButtons.js' %}"></script>
+    <script src="{% static 'tasks/jquery.timeTo.js' %}"></script>
+    <script src="{% static 'tasks/timer.js' %}"></script>
     <link rel="stylesheet" href="{% static 'users/UsersStyle.css' %}"/>
     <link rel="stylesheet" href="{% static 'tasks/TasksStyle.css' %}"/>
+    <link rel="stylesheet" href="{% static 'tasks/timer.css' %}"/>
     <script>
         /* Here i can code everything then move it outside... */
         var loged = false;
@@ -88,6 +91,7 @@
     <div id=avatar><img src="{% static 'users/images/avatar.png' %}" /></div>
     <div id=hp><span>0</span><img src="{% static 'tasks/images/blood.png' %}" /></div>
     <div id=credits><span>0</span><img src="{% static 'tasks/images/money.png' %}" /></div>
+    <div id=timer><img src="{% static 'tasks/images/timer.png' %}" /></div>
     <div id=userOptions></div>
 </div>
 <div id=content></div>
@@ -109,9 +113,30 @@
     <form name=formDialogAddTask>
     <fieldset>
         <label for="value">Gain</label>
-        <input value=10 type="text" name="value" id="value" class="text ui-widget-content ui-corner-all" />
+        <input value=10 type="number" name="value" id="value" class="text ui-widget-content ui-corner-all" />
     </fieldset>
   </form>
+</div>
+
+<div id="dialog-confirm" title="Are you shure?" class=hidden>
+    Are you shure about that?
+</div>
+
+
+<audio id=alarmSound preload loop>
+    <source src="{% static 'tasks/sounds/alarm.ogg' %}" type="audio/ogg">
+</audio>
+<audio id=tickSound preload loop>
+    <source src="{% static 'tasks/sounds/tick.ogg' %}" type="audio/ogg">
+</audio>
+
+
+<div id="dialog-timer" title="Timer">
+</div>
+
+<div id="dialog-timer-minutes" title="How long?">
+    <label for="minutes">Minutes</label>
+        <form name=formTimerMinutes><input value=10 type="number" name="minutes" id="minutes" class="text ui-widget-content ui-corner-all" /></form>
 </div>
 
 </body>

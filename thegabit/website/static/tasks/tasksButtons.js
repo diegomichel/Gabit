@@ -11,8 +11,21 @@ $(function () {
         accept: ".task",
         hoverClass: "buttonHover",
         drop: function (event, ui) {
-            Tasks.delete(ui.draggable.get(0));
-            ui.draggable.get(0).remove();
+            $("#dialog-confirm").removeClass("hidden").dialog({
+                resizable: false,
+                height: 140,
+                modal: true,
+                buttons: {
+                    "Yes": function () {
+                        Tasks.delete(ui.draggable.get(0));
+                        ui.draggable.get(0).remove();
+                        $(this).dialog("close");
+                    },
+                    Cancel: function () {
+                        $(this).dialog("close");
+                    }
+                }
+            });
         }
     }).hide();
 
@@ -24,7 +37,7 @@ $(function () {
             Tasks.complete(ui.draggable.get(0));
             $(ui.draggable.get(0)).addClass("taskDone");
             console.log();
-            if(parseInt($(ui.draggable.get(0)).closest("dl").attr("id")[4]) == 1)
+            if (parseInt($(ui.draggable.get(0)).closest("dl").attr("id")[4]) == 1)
                 makeDarker($(ui.draggable.get(0)));
         }
     }).hide();

@@ -39,7 +39,7 @@ function initDialogs() {
         modal: true,
         buttons: {
             "Add Task": function () {
-                Tasks.addTask($(this).data('type'),$(this).data('habit_title'),$("#dialogAddTask form fieldset input#value").val());
+                Tasks.addTask($(this).data('type'), $(this).data('habit_title'), $("#dialogAddTask form fieldset input#value").val());
                 $('div#dialogAddTask').dialog('close');
                 $("dt input").val("");
                 return false;
@@ -49,25 +49,31 @@ function initDialogs() {
                 $("dt input").val("");
             }
         },
-        open: function( event, ui ) {
+        open: function (event, ui) {
             $("div#dialogAddTask dl dd ul li").html($(this).data('habit_title'));
             $("div#dialogAddTask form fieldset input#value").val("10");
+            $("div#dialogAddTask form fieldset input#value").select();
+
+            if(parseInt($(this).data('type')) == 4)
+            {
+                $("div#dialogAddTask form fieldset label").html("Cost");
+            }
         },
         close: function () {
             $(this).dialog("close");
             $("dt input").val("");
         }
     });
-    $('form[name=formDialogAddTask]').submit(function(){
+    $('form[name=formDialogAddTask]').submit(function () {
         $("div#dialogAddTask").parents('.ui-dialog').first().find('.ui-button').eq(1).click();
         return false;
     });
 }
-function makeDarker(obj){
-            var tmpString = obj.css("background-color").substring(4,17);
-            var values = tmpString.split(",");
-            var red = parseInt(parseInt(values[0]) * 1.20);
-            var green = parseInt(parseInt(values[1]) * 1.20);
-            var blue = parseInt(parseInt(values[2]) * 1.20);
-            obj.css("background-color","rgb("+red+","+green+","+blue+")");
+function makeDarker(obj) {
+    var tmpString = obj.css("background-color").substring(4, 17);
+    var values = tmpString.split(",");
+    var red = parseInt(parseInt(values[0]) * 1.20);
+    var green = parseInt(parseInt(values[1]) * 1.20);
+    var blue = parseInt(parseInt(values[2]) * 1.20);
+    obj.css("background-color", "rgb(" + red + "," + green + "," + blue + ")");
 }
