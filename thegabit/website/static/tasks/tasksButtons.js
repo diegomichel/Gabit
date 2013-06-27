@@ -34,10 +34,18 @@ $(function () {
         accept: ".task",
         hoverClass: "buttonHover",
         drop: function (event, ui) {
-            Tasks.complete(ui.draggable.get(0));
-            $(ui.draggable.get(0)).addClass("taskDone");
-            if (parseInt($(ui.draggable.get(0)).closest("dl").attr("id")[4]) == 1)
-                makeDarker($(ui.draggable.get(0)));
+            if (parseInt($(ui.draggable.get(0)).closest("dl").attr("id")[4]) == 0)
+            {
+                $( "#dialog-confirm-todo").data("ui",ui.draggable.get(0)).dialog("open");
+               // $(ui.draggable.get(0)).remove();
+                return;
+            }
+            else{
+                Tasks.complete(ui.draggable.get(0));
+                $(ui.draggable.get(0)).addClass("taskDone");
+                if (parseInt($(ui.draggable.get(0)).closest("dl").attr("id")[4]) == 1)
+                    makeDarker($(ui.draggable.get(0)));
+            }
         }
     }).hide();
 

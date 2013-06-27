@@ -9,7 +9,7 @@
 {% block listItems %}
     {% if tasks %}
     {% for task in tasks %}
-        <dd class="task movible {% if task.completed_today %}taskDone{% endif %}" id={{ task.id }}>
+        <dd class="task {% if task.completed_today %}taskDone{% endif %}" id={{ task.id }}>
         <ul>
             {% if task.cost %}<li class=taskHit>
                 <img src={% static 'tasks/images/dolars.png' %} /><span>{{ task.cost }}</span>

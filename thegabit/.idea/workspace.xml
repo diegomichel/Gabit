@@ -3,9 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="8e1279c9-bbe4-4643-9e7a-6572857d06f1" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/theGabit2.db" afterPath="$PROJECT_DIR$/theGabit2.db" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website/static/tasks/TasksStyle.css" afterPath="$PROJECT_DIR$/website/static/tasks/TasksStyle.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website/static/users/common.js" afterPath="$PROJECT_DIR$/website/static/users/common.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website/templates/users/index.html" afterPath="$PROJECT_DIR$/website/templates/users/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website/templates/tasks/task.html" afterPath="$PROJECT_DIR$/website/templates/tasks/task.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website/static/tasks/tasks.js" afterPath="$PROJECT_DIR$/website/static/tasks/tasks.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website/static/tasks/tasksButtons.js" afterPath="$PROJECT_DIR$/website/static/tasks/tasksButtons.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website/views.py" afterPath="$PROJECT_DIR$/website/views.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="thegabit.iws" />
@@ -15,8 +18,8 @@
     <file path="/urls.py" changelist="8e1279c9-bbe4-4643-9e7a-6572857d06f1" time="1372255201974" ignored="false" />
     <file path="/models.py" changelist="8e1279c9-bbe4-4643-9e7a-6572857d06f1" time="1372275031999" ignored="false" />
     <file path="/admin.py" changelist="8e1279c9-bbe4-4643-9e7a-6572857d06f1" time="1371889757691" ignored="false" />
-    <file path="/views.py" changelist="8e1279c9-bbe4-4643-9e7a-6572857d06f1" time="1372255486536" ignored="false" />
-    <file path="/index.html" changelist="8e1279c9-bbe4-4643-9e7a-6572857d06f1" time="1372352178719" ignored="false" />
+    <file path="/views.py" changelist="8e1279c9-bbe4-4643-9e7a-6572857d06f1" time="1372367508407" ignored="false" />
+    <file path="/index.html" changelist="8e1279c9-bbe4-4643-9e7a-6572857d06f1" time="1372368281519" ignored="false" />
     <file path="/tasks.html" changelist="8e1279c9-bbe4-4643-9e7a-6572857d06f1" time="1372141747613" ignored="false" />
     <file path="/style.css" changelist="8e1279c9-bbe4-4643-9e7a-6572857d06f1" time="1371962878871" ignored="false" />
     <file path="/init.js" changelist="8e1279c9-bbe4-4643-9e7a-6572857d06f1" time="1371769443345" ignored="false" />
@@ -24,18 +27,20 @@
     <file path="/loader.js.html" changelist="8e1279c9-bbe4-4643-9e7a-6572857d06f1" time="1371866673911" ignored="false" />
     <file path="/login.js.html" changelist="8e1279c9-bbe4-4643-9e7a-6572857d06f1" time="1371865477701" ignored="false" />
     <file path="/login.js" changelist="8e1279c9-bbe4-4643-9e7a-6572857d06f1" time="1371866605094" ignored="false" />
-    <file path="/a.dummy" changelist="8e1279c9-bbe4-4643-9e7a-6572857d06f1" time="1372359592639" ignored="false" />
+    <file path="/a.dummy" changelist="8e1279c9-bbe4-4643-9e7a-6572857d06f1" time="1372371313763" ignored="false" />
     <file path="/habits.html" changelist="8e1279c9-bbe4-4643-9e7a-6572857d06f1" time="1372145085620" ignored="false" />
     <file path="/tasks.js" changelist="8e1279c9-bbe4-4643-9e7a-6572857d06f1" time="1372359366240" ignored="false" />
     <file path="/task.html" changelist="8e1279c9-bbe4-4643-9e7a-6572857d06f1" time="1372269801704" ignored="false" />
     <file path="/TasksStyle.css" changelist="8e1279c9-bbe4-4643-9e7a-6572857d06f1" time="1372360259865" ignored="false" />
-    <file path="/common.js" changelist="8e1279c9-bbe4-4643-9e7a-6572857d06f1" time="1372337276319" ignored="false" />
-    <file path="/tasksButtons.js" changelist="8e1279c9-bbe4-4643-9e7a-6572857d06f1" time="1372336034869" ignored="false" />
+    <file path="/common.js" changelist="8e1279c9-bbe4-4643-9e7a-6572857d06f1" time="1372369162158" ignored="false" />
+    <file path="/tasksButtons.js" changelist="8e1279c9-bbe4-4643-9e7a-6572857d06f1" time="1372369085289" ignored="false" />
     <file path="/example.html" changelist="8e1279c9-bbe4-4643-9e7a-6572857d06f1" time="1372347093999" ignored="false" />
     <file path="/timeTo.css" changelist="8e1279c9-bbe4-4643-9e7a-6572857d06f1" time="1372340200802" ignored="false" />
     <file path="/jquery.pietimer.js" changelist="8e1279c9-bbe4-4643-9e7a-6572857d06f1" time="1372344709364" ignored="false" />
     <file path="/timer.js" changelist="8e1279c9-bbe4-4643-9e7a-6572857d06f1" time="1372356185196" ignored="false" />
     <file path="/jquery.timeTo.js" changelist="8e1279c9-bbe4-4643-9e7a-6572857d06f1" time="1372353796832" ignored="false" />
+    <file path="$PROJECT_DIR$/../../personal/thegabit/website/static/users/jquery-ui.js" changelist="8e1279c9-bbe4-4643-9e7a-6572857d06f1" time="1372361148380" ignored="false" />
+    <file path="$PROJECT_DIR$/../../personal/thegabit/website/static/users/jquery-ui-1.8.16.custom.min.js" changelist="8e1279c9-bbe4-4643-9e7a-6572857d06f1" time="1372361148380" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,37 +60,39 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="TasksStyle.css" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="TasksStyle.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/website/static/tasks/TasksStyle.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="193" column="32" selection-start="3264" selection-end="3264" vertical-scroll-proportion="0.36330935">
+            <state line="102" column="10" selection-start="1830" selection-end="1833" vertical-scroll-proportion="-7.4">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="timer.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/website/static/tasks/timer.js">
+      <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/website/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="35" selection-start="936" selection-end="936" vertical-scroll-proportion="-11.56">
-              <folding />
+            <state line="42" column="16" selection-start="1363" selection-end="1375" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="jquery.timeTo.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/website/static/tasks/jquery.timeTo.js">
+      <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/website/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="85" column="14" selection-start="3263" selection-end="3263" vertical-scroll-proportion="0.0">
+            <state line="103" column="0" selection-start="2908" selection-end="2908" vertical-scroll-proportion="-7.56">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/website/templates/users/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="57" selection-start="2194" selection-end="2194" vertical-scroll-proportion="0.39215687">
+            <state line="141" column="9" selection-start="5591" selection-end="5591" vertical-scroll-proportion="0.61509436">
               <folding>
                 <element signature="n#style#0;n#dl#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#dd#0;n#dl#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -94,19 +101,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tasksButtons.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/website/static/tasks/tasksButtons.js">
+      <file leaf-file-name="task.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/website/templates/tasks/task.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="21" selection-start="269" selection-end="269" vertical-scroll-proportion="-7.4">
+            <state line="11" column="23" selection-start="252" selection-end="252" vertical-scroll-proportion="-7.1923075">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="common.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../personal/thegabit/website/static/users/common.js">
+      <file leaf-file-name="tasksButtons.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/website/static/tasks/tasksButtons.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="62" column="21" selection-start="1923" selection-end="1923" vertical-scroll-proportion="0.0">
+            <state line="43" column="16" selection-start="1371" selection-end="1407" vertical-scroll-proportion="-19.64">
               <folding />
             </state>
           </provider>
@@ -115,27 +122,16 @@
       <file leaf-file-name="common.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/website/static/users/common.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="42" selection-start="1053" selection-end="1058" vertical-scroll-proportion="-7.4">
+            <state line="42" column="19" selection-start="993" selection-end="993" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="example.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://C:/Lexxus-jq-timeTo-65f9cd0/example.html">
+      <file leaf-file-name="habits.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/website/templates/tasks/habits.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="0" selection-start="577" selection-end="603" vertical-scroll-proportion="-17.653847">
-              <folding>
-                <marker date="1372347135939" expanded="true" signature="155:257" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="timeTo.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://C:/Lexxus-jq-timeTo-65f9cd0/timeTo.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="18" selection-start="1290" selection-end="1297" vertical-scroll-proportion="0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
               <folding />
             </state>
           </provider>
@@ -144,7 +140,7 @@
       <file leaf-file-name="tasks.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/website/static/tasks/tasks.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="100" column="38" selection-start="3456" selection-end="3467" vertical-scroll-proportion="-6.8">
+            <state line="75" column="0" selection-start="2600" selection-end="2600" vertical-scroll-proportion="-15.56">
               <folding />
             </state>
           </provider>
@@ -171,19 +167,19 @@
         <option value="$PROJECT_DIR$/../mockups/tasks.html" />
         <option value="$PROJECT_DIR$/website/templates/tasks/habits.html" />
         <option value="$PROJECT_DIR$/thegabit/urls.py" />
-        <option value="$PROJECT_DIR$/website/views.py" />
-        <option value="$PROJECT_DIR$/website/templates/tasks/task.html" />
         <option value="$PROJECT_DIR$/website/models.py" />
-        <option value="$PROJECT_DIR$/website/static/users/common.js" />
         <option value="C:/Lexxus-jq-timeTo-65f9cd0/timeTo.css" />
         <option value="C:/Lexxus-jq-timeTo-65f9cd0/jquery.pietimer.js" />
         <option value="C:/Lexxus-jq-timeTo-65f9cd0/example.html" />
         <option value="$PROJECT_DIR$/website/static/tasks/jquery.timeTo.js" />
         <option value="$PROJECT_DIR$/website/static/tasks/timer.js" />
-        <option value="$PROJECT_DIR$/website/static/tasks/tasksButtons.js" />
-        <option value="$PROJECT_DIR$/website/static/tasks/tasks.js" />
-        <option value="$PROJECT_DIR$/website/templates/users/index.html" />
         <option value="$PROJECT_DIR$/website/static/tasks/TasksStyle.css" />
+        <option value="$PROJECT_DIR$/website/templates/tasks/task.html" />
+        <option value="$PROJECT_DIR$/website/views.py" />
+        <option value="$PROJECT_DIR$/website/templates/users/index.html" />
+        <option value="$PROJECT_DIR$/website/static/tasks/tasksButtons.js" />
+        <option value="$PROJECT_DIR$/website/static/users/common.js" />
+        <option value="$PROJECT_DIR$/website/static/tasks/tasks.js" />
       </list>
     </option>
   </component>
@@ -602,8 +598,8 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24479803" sideWeight="0.7009238" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2990762" sideWeight="0.24663402" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2852194" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2852194" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22286375" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -674,34 +670,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/website/templates/tasks/task.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="24" selection-start="253" selection-end="253" vertical-scroll-proportion="-7.1923075">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../jquery.pietimer/jquery.pietimer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="28" selection-start="669" selection-end="669" vertical-scroll-proportion="-13.44">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Lexxus-jq-timeTo-65f9cd0/jquery.pietimer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="72" column="69" selection-start="2303" selection-end="2303" vertical-scroll-proportion="0.36166668">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../jquery.pietimer/example.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="9" selection-start="368" selection-end="645" vertical-scroll-proportion="0.5555556">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/thegabit/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="20" column="49" selection-start="1110" selection-end="1110" vertical-scroll-proportion="0.0">
@@ -723,26 +691,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/Lexxus-jq-timeTo-65f9cd0/example.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="0" selection-start="577" selection-end="603" vertical-scroll-proportion="-17.653847">
-          <folding>
-            <marker date="1372347135939" expanded="true" signature="155:257" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/website/static/users/common.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="42" selection-start="1053" selection-end="1058" vertical-scroll-proportion="-7.4">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/website/static/tasks/timer.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="23" column="35" selection-start="936" selection-end="936" vertical-scroll-proportion="-11.56">
-          <folding />
+          <folding>
+            <marker date="1372356316948" expanded="true" signature="-1:-1" placeholder="{&quot;autoOpen&quot;: false...}" />
+            <marker date="1372356316948" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -753,41 +708,87 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://C:/Lexxus-jq-timeTo-65f9cd0/example.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="41" selection-start="198" selection-end="198" vertical-scroll-proportion="-5.230769">
+          <folding>
+            <marker date="1372347135939" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website/static/tasks/TasksStyle.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="102" column="10" selection-start="1830" selection-end="1833" vertical-scroll-proportion="-7.4">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website/templates/tasks/habits.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="103" column="0" selection-start="2908" selection-end="2908" vertical-scroll-proportion="-7.56">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="16" selection-start="1363" selection-end="1375" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/../../personal/thegabit/website/static/users/common.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="21" selection-start="1923" selection-end="1923" vertical-scroll-proportion="0.0">
+        <state line="33" column="24" selection-start="777" selection-end="777" vertical-scroll-proportion="0.29057187">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website/static/tasks/tasksButtons.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="16" selection-start="1371" selection-end="1407" vertical-scroll-proportion="-19.64">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website/templates/tasks/task.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="23" selection-start="252" selection-end="252" vertical-scroll-proportion="-7.1923075">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website/static/users/common.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="19" selection-start="993" selection-end="993" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/website/static/tasks/tasks.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="100" column="38" selection-start="3456" selection-end="3467" vertical-scroll-proportion="-6.8">
+        <state line="75" column="0" selection-start="2600" selection-end="2600" vertical-scroll-proportion="-15.56">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/website/templates/users/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="57" selection-start="2194" selection-end="2194" vertical-scroll-proportion="0.39215687">
+        <state line="141" column="9" selection-start="5591" selection-end="5591" vertical-scroll-proportion="0.61509436">
           <folding>
             <element signature="n#style#0;n#dl#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#dd#0;n#dl#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/website/static/tasks/tasksButtons.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="21" selection-start="269" selection-end="269" vertical-scroll-proportion="-7.4">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/website/static/tasks/TasksStyle.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="193" column="32" selection-start="3264" selection-end="3264" vertical-scroll-proportion="0.36330935">
-          <folding />
         </state>
       </provider>
     </entry>

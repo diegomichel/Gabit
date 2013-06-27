@@ -62,7 +62,6 @@ var Tasks = {
                 $("div#content").append(response);
 
                 $("dl#list4").sortable({
-                    containment: "document",
                     activate: function (event, ui) {
                         $("#trash").fadeIn();
                         $("#reward").fadeIn();

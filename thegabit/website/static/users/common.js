@@ -32,6 +32,24 @@ function alerta(output_msg, title_msg) {
     });
 }
 function initDialogs() {
+    $( "#dialog-confirm-todo" ).dialog({
+      autoOpen: false,
+      resizable: false,
+      width:'auto',
+      height:'auto',
+      modal: true,
+      buttons: {
+        "Accept": function() {
+          Tasks.complete($(this).data("ui"));
+          $(this).data("ui").remove();
+          $( this ).dialog( "close" );
+        },
+        Cancel: function() {
+          $( this ).dialog( "close" );
+        }
+      }
+    });
+
     $("div#dialogAddTask").dialog({
         position: { my: "center top", at: "center top", of: $("#header") },
         autoOpen: false,

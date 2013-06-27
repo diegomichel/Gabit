@@ -32,7 +32,12 @@ def deleteReward(request):
 
 def getTasks(request):
     type = request.GET['type']
-    tasks = Task.objects.filter(user__pk=request.user.pk, type=type).order_by('order', '-id')
+
+    if int(type) == Task.todo:
+        tasks = Task.objects.filter(user__pk=request.user.pk, type=type,completed_at=None).order_by('order', '-id')
+    else:
+        tasks = Task.objects.filter(user__pk=request.user.pk, type=type).order_by('order', '-id')
+
     context = {'tasks': tasks, 'all': True, 'type': type}
     return render(request, 'tasks/task.html', context)
 
@@ -96,7 +101,6 @@ def saveRewardsOrder(request):
 
 def loginUser(request):
     if request.user.is_authenticated():
-        print request.user.get_profile()
         return HttpResponse(serializers.serialize("json", [request.user.get_profile()]))
 
     try:
