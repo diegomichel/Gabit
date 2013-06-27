@@ -11,7 +11,9 @@ var Tasks = {
                 location.reload();
             })
         }
+        $("body").effect( 'highlight', 'slow' );
     },
+
     complete: function (id) {
         $.get("completeTask/",
             {id: id.id},
@@ -19,6 +21,8 @@ var Tasks = {
                 var values = $.parseJSON(data);
                 $("#credits span").html(values.credits);
                 $("#hp span").html(values.hp);
+                $("#credits").effect( 'bounce', {}, 500 );
+                $(id).effect( 'highlight', 'slow' );
             }
         ).fail(function () {
                 location.reload();
@@ -42,6 +46,8 @@ var Tasks = {
                 var values = $.parseJSON(data);
                 $("#credits span").html(values.credits);
                 $("#hp span").html(values.hp);
+                $("#credits").effect( 'bounce', 'slow' );
+                $(id).effect( 'highlight', 'slow' );
             }
         ).fail(function () {
                 location.reload();
@@ -93,6 +99,7 @@ var Tasks = {
                     activate: function (event, ui) {
                         $("#trash").fadeIn();
                         $("#completed").fadeIn();
+
                     },
                     deactivate: function (event, ui) {
                         $("#trash").fadeOut();
