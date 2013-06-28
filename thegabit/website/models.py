@@ -53,7 +53,16 @@ class Task(models.Model):
         return self.title
 
     def completed_today(self):
-        return self.completed_at >= timezone.now() - datetime.timedelta(days=1)
+        if self.completed_at == None:
+            return False
+        now = datetime.datetime.now()
+
+        if now.strftime("%j") == self.completed_at.strftime("%j") and now.strftime("%y") == self.completed_at.strftime("%y"):
+            return True
+        return False
+
+
+        #return self.completed_at >= timezone.now() - datetime.timedelta(days=1)
 
 
 class Reward(models.Model):
@@ -65,3 +74,8 @@ class Reward(models.Model):
     expire_at = models.DateTimeField(default=timezone.now(),blank=True)
     def __unicode__(self):
         return self.title
+
+class log(models.Model):
+    user = models.ForeignKey(User)
+    record = models.CharField(max_length=1000)
+    date = models.DateTimeField(default=timezone.now())

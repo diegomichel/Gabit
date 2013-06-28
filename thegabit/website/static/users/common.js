@@ -79,6 +79,7 @@ function initDialogs() {
         },
         close: function () {
             $(this).dialog("close");
+            $("div#dialogAddTask form fieldset label").html("Gain");
             $("dt input").val("");
         }
     });

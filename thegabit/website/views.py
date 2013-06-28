@@ -19,6 +19,7 @@ def index(request):
 def deleteTask(request):
     id = request.GET['id']
     task = request.user.task_set.filter(pk=id)
+    request.user.log_set.create(record="Deleted task:"+task.get().title);
     task.delete();
     return HttpResponse("")
 
@@ -26,6 +27,7 @@ def deleteTask(request):
 def deleteReward(request):
     id = request.GET['id']
     reward = request.user.reward_set.filter(pk=id)
+    request.user.log_set.create(record="Deleted reward:"+reward.get().title);
     reward.delete();
     return HttpResponse("")
 
@@ -54,6 +56,7 @@ def addTask(request):
     gain = request.GET['gain']
     User = request.user;
     task = User.task_set.create(title=title, type=type, value=gain)
+    request.user.log_set.create(record="Added task:"+task.title+" With pay:"+task.value);
     tasks = [task]
     context = {'tasks': tasks, 'all': False}
     rendered = render_to_string('tasks/task.html', context)
@@ -66,6 +69,7 @@ def addReward(request):
     cost = request.GET['gain']
     User = request.user;
     reward = User.reward_set.create(title=title, cost=cost)
+    request.user.log_set.create(record="Added reward:"+reward.title+" With pay:"+reward.cost);
     rewards = [reward]
     context = {'tasks': rewards, 'all': False}
     rendered = render_to_string('tasks/task.html', context)
@@ -101,6 +105,7 @@ def saveRewardsOrder(request):
 
 def loginUser(request):
     if request.user.is_authenticated():
+        request.user.log_set.create(record="User Authenticated");
         return HttpResponse(serializers.serialize("json", [request.user.get_profile()]))
 
     try:
@@ -130,6 +135,7 @@ def completeTask(request):
 
     task = request.user.task_set.filter(pk=id)
     task.update(completed_at=timezone.now())
+    request.user.log_set.create(record="Task done:"+task.get().title+" Won:"+str(task.get().value));
 
     profile = request.user.get_profile();
     profile.credits += task.get().value;
@@ -147,6 +153,8 @@ def buyReward(request):
 
     profile = request.user.get_profile()
     profile.credits -= reward.get().cost
+
+    request.user.log_set.create(record="Bought reward:"+reward.get().title+" cost:"+str(reward.get().cost));
 
     if id == 1:
         profile.hp += 10

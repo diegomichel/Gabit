@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8e1279c9-bbe4-4643-9e7a-6572857d06f1" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/theGabit2.db" afterPath="$PROJECT_DIR$/theGabit2.db" />
+      <change type="DELETED" beforePath="C:\Python27\theGabit\thegabit\theGabit2.db" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website/static/tasks/TasksStyle.css" afterPath="$PROJECT_DIR$/website/static/tasks/TasksStyle.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website/static/users/common.js" afterPath="$PROJECT_DIR$/website/static/users/common.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website/templates/users/index.html" afterPath="$PROJECT_DIR$/website/templates/users/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website/templates/tasks/task.html" afterPath="$PROJECT_DIR$/website/templates/tasks/task.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website/static/tasks/tasks.js" afterPath="$PROJECT_DIR$/website/static/tasks/tasks.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website/static/tasks/tasksButtons.js" afterPath="$PROJECT_DIR$/website/static/tasks/tasksButtons.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website/models.py" afterPath="$PROJECT_DIR$/website/models.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website/views.py" afterPath="$PROJECT_DIR$/website/views.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -16,9 +14,9 @@
     <file path="/settings.py" changelist="8e1279c9-bbe4-4643-9e7a-6572857d06f1" time="1371889602227" ignored="false" />
     <file path="/Dummy.txt" changelist="8e1279c9-bbe4-4643-9e7a-6572857d06f1" time="1372267904062" ignored="false" />
     <file path="/urls.py" changelist="8e1279c9-bbe4-4643-9e7a-6572857d06f1" time="1372255201974" ignored="false" />
-    <file path="/models.py" changelist="8e1279c9-bbe4-4643-9e7a-6572857d06f1" time="1372275031999" ignored="false" />
+    <file path="/models.py" changelist="8e1279c9-bbe4-4643-9e7a-6572857d06f1" time="1372423394606" ignored="false" />
     <file path="/admin.py" changelist="8e1279c9-bbe4-4643-9e7a-6572857d06f1" time="1371889757691" ignored="false" />
-    <file path="/views.py" changelist="8e1279c9-bbe4-4643-9e7a-6572857d06f1" time="1372367508407" ignored="false" />
+    <file path="/views.py" changelist="8e1279c9-bbe4-4643-9e7a-6572857d06f1" time="1372373309552" ignored="false" />
     <file path="/index.html" changelist="8e1279c9-bbe4-4643-9e7a-6572857d06f1" time="1372368281519" ignored="false" />
     <file path="/tasks.html" changelist="8e1279c9-bbe4-4643-9e7a-6572857d06f1" time="1372141747613" ignored="false" />
     <file path="/style.css" changelist="8e1279c9-bbe4-4643-9e7a-6572857d06f1" time="1371962878871" ignored="false" />
@@ -27,11 +25,11 @@
     <file path="/loader.js.html" changelist="8e1279c9-bbe4-4643-9e7a-6572857d06f1" time="1371866673911" ignored="false" />
     <file path="/login.js.html" changelist="8e1279c9-bbe4-4643-9e7a-6572857d06f1" time="1371865477701" ignored="false" />
     <file path="/login.js" changelist="8e1279c9-bbe4-4643-9e7a-6572857d06f1" time="1371866605094" ignored="false" />
-    <file path="/a.dummy" changelist="8e1279c9-bbe4-4643-9e7a-6572857d06f1" time="1372371313763" ignored="false" />
+    <file path="/a.dummy" changelist="8e1279c9-bbe4-4643-9e7a-6572857d06f1" time="1372424851690" ignored="false" />
     <file path="/habits.html" changelist="8e1279c9-bbe4-4643-9e7a-6572857d06f1" time="1372145085620" ignored="false" />
     <file path="/tasks.js" changelist="8e1279c9-bbe4-4643-9e7a-6572857d06f1" time="1372359366240" ignored="false" />
     <file path="/task.html" changelist="8e1279c9-bbe4-4643-9e7a-6572857d06f1" time="1372269801704" ignored="false" />
-    <file path="/TasksStyle.css" changelist="8e1279c9-bbe4-4643-9e7a-6572857d06f1" time="1372360259865" ignored="false" />
+    <file path="/TasksStyle.css" changelist="8e1279c9-bbe4-4643-9e7a-6572857d06f1" time="1372371751303" ignored="false" />
     <file path="/common.js" changelist="8e1279c9-bbe4-4643-9e7a-6572857d06f1" time="1372369162158" ignored="false" />
     <file path="/tasksButtons.js" changelist="8e1279c9-bbe4-4643-9e7a-6572857d06f1" time="1372369085289" ignored="false" />
     <file path="/example.html" changelist="8e1279c9-bbe4-4643-9e7a-6572857d06f1" time="1372347093999" ignored="false" />
@@ -41,6 +39,7 @@
     <file path="/jquery.timeTo.js" changelist="8e1279c9-bbe4-4643-9e7a-6572857d06f1" time="1372353796832" ignored="false" />
     <file path="$PROJECT_DIR$/../../personal/thegabit/website/static/users/jquery-ui.js" changelist="8e1279c9-bbe4-4643-9e7a-6572857d06f1" time="1372361148380" ignored="false" />
     <file path="$PROJECT_DIR$/../../personal/thegabit/website/static/users/jquery-ui-1.8.16.custom.min.js" changelist="8e1279c9-bbe4-4643-9e7a-6572857d06f1" time="1372361148380" ignored="false" />
+    <file path="$PROJECT_DIR$/../../personal/thegabit/website/models.py" changelist="8e1279c9-bbe4-4643-9e7a-6572857d06f1" time="1372424847740" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +62,7 @@
       <file leaf-file-name="TasksStyle.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/website/static/tasks/TasksStyle.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="102" column="10" selection-start="1830" selection-end="1833" vertical-scroll-proportion="-7.4">
+            <state line="193" column="49" selection-start="3281" selection-end="3281" vertical-scroll-proportion="-10.12">
               <folding />
             </state>
           </provider>
@@ -72,7 +71,7 @@
       <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/website/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="16" selection-start="1363" selection-end="1375" vertical-scroll-proportion="0.0">
+            <state line="66" column="0" selection-start="2019" selection-end="2019" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -83,16 +82,16 @@
       <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/website/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="103" column="0" selection-start="2908" selection-end="2908" vertical-scroll-proportion="-7.56">
+            <state line="96" column="14" selection-start="2976" selection-end="2976" vertical-scroll-proportion="-46.24">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/website/templates/users/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="141" column="9" selection-start="5591" selection-end="5591" vertical-scroll-proportion="0.61509436">
+            <state line="143" column="6" selection-start="5681" selection-end="5681" vertical-scroll-proportion="-7.0588236">
               <folding>
                 <element signature="n#style#0;n#dl#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#dd#0;n#dl#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -104,7 +103,7 @@
       <file leaf-file-name="task.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/website/templates/tasks/task.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="23" selection-start="252" selection-end="252" vertical-scroll-proportion="-7.1923075">
+            <state line="11" column="50" selection-start="279" selection-end="279" vertical-scroll-proportion="-7.1923075">
               <folding />
             </state>
           </provider>
@@ -119,10 +118,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="common.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="common.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/website/static/users/common.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="19" selection-start="993" selection-end="993" vertical-scroll-proportion="0.0">
+            <state line="81" column="65" selection-start="2414" selection-end="2414" vertical-scroll-proportion="0.47848538">
               <folding />
             </state>
           </provider>
@@ -167,19 +166,19 @@
         <option value="$PROJECT_DIR$/../mockups/tasks.html" />
         <option value="$PROJECT_DIR$/website/templates/tasks/habits.html" />
         <option value="$PROJECT_DIR$/thegabit/urls.py" />
-        <option value="$PROJECT_DIR$/website/models.py" />
         <option value="C:/Lexxus-jq-timeTo-65f9cd0/timeTo.css" />
         <option value="C:/Lexxus-jq-timeTo-65f9cd0/jquery.pietimer.js" />
         <option value="C:/Lexxus-jq-timeTo-65f9cd0/example.html" />
         <option value="$PROJECT_DIR$/website/static/tasks/jquery.timeTo.js" />
         <option value="$PROJECT_DIR$/website/static/tasks/timer.js" />
-        <option value="$PROJECT_DIR$/website/static/tasks/TasksStyle.css" />
-        <option value="$PROJECT_DIR$/website/templates/tasks/task.html" />
-        <option value="$PROJECT_DIR$/website/views.py" />
         <option value="$PROJECT_DIR$/website/templates/users/index.html" />
         <option value="$PROJECT_DIR$/website/static/tasks/tasksButtons.js" />
-        <option value="$PROJECT_DIR$/website/static/users/common.js" />
         <option value="$PROJECT_DIR$/website/static/tasks/tasks.js" />
+        <option value="$PROJECT_DIR$/website/static/tasks/TasksStyle.css" />
+        <option value="$PROJECT_DIR$/website/views.py" />
+        <option value="$PROJECT_DIR$/website/templates/tasks/task.html" />
+        <option value="$PROJECT_DIR$/website/models.py" />
+        <option value="$PROJECT_DIR$/website/static/users/common.js" />
       </list>
     </option>
   </component>
@@ -598,8 +597,8 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24479803" sideWeight="0.7009238" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2852194" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22286375" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2990762" sideWeight="0.24663402" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31639722" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -670,13 +669,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/thegabit/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="49" selection-start="1110" selection-end="1110" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/website/static/tasks/timer.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -717,33 +709,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/website/static/tasks/TasksStyle.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="102" column="10" selection-start="1830" selection-end="1833" vertical-scroll-proportion="-7.4">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/website/templates/tasks/habits.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/website/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="103" column="0" selection-start="2908" selection-end="2908" vertical-scroll-proportion="-7.56">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/website/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="16" selection-start="1363" selection-end="1375" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -761,20 +730,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/website/templates/tasks/task.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="23" selection-start="252" selection-end="252" vertical-scroll-proportion="-7.1923075">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/website/static/users/common.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="19" selection-start="993" selection-end="993" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/website/static/tasks/tasks.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="75" column="0" selection-start="2600" selection-end="2600" vertical-scroll-proportion="-15.56">
@@ -784,11 +739,55 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/website/templates/users/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="141" column="9" selection-start="5591" selection-end="5591" vertical-scroll-proportion="0.61509436">
+        <state line="143" column="6" selection-start="5681" selection-end="5681" vertical-scroll-proportion="-7.0588236">
           <folding>
             <element signature="n#style#0;n#dl#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#dd#0;n#dl#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website/static/tasks/TasksStyle.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="193" column="49" selection-start="3281" selection-end="3281" vertical-scroll-proportion="-10.12">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dumpdata.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="96" column="14" selection-start="2976" selection-end="2976" vertical-scroll-proportion="-46.24">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website/templates/tasks/task.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="50" selection-start="279" selection-end="279" vertical-scroll-proportion="-7.1923075">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="66" column="0" selection-start="2019" selection-end="2019" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website/static/users/common.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="81" column="65" selection-start="2414" selection-end="2414" vertical-scroll-proportion="0.47848538">
+          <folding />
         </state>
       </provider>
     </entry>
