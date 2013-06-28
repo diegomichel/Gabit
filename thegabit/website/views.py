@@ -9,17 +9,22 @@ from django.core import serializers
 from django.template.loader import render_to_string
 from django.utils import timezone
 
-from website.models import Task, Reward, UserProfile
+from website.models import Task, Reward, UserProfile, Log
 
 
 def index(request):
     return render(request, 'users/index.html', {})
 
 
+def getLogs(request):
+    logs = request.user.log_set.all().order_by('date')
+    context = {'logs': logs}
+    return render(request, 'users/logs.html', context)
+
 def deleteTask(request):
     id = request.GET['id']
     task = request.user.task_set.filter(pk=id)
-    request.user.log_set.create(record="Deleted task:"+task.get().title);
+    request.user.log_set.create(record="Deleted task: "+task.get().title);
     task.delete();
     return HttpResponse("")
 
@@ -27,7 +32,7 @@ def deleteTask(request):
 def deleteReward(request):
     id = request.GET['id']
     reward = request.user.reward_set.filter(pk=id)
-    request.user.log_set.create(record="Deleted reward:"+reward.get().title);
+    request.user.log_set.create(record="Deleted reward: "+reward.get().title);
     reward.delete();
     return HttpResponse("")
 
@@ -36,16 +41,16 @@ def getTasks(request):
     type = request.GET['type']
 
     if int(type) == Task.todo:
-        tasks = Task.objects.filter(user__pk=request.user.pk, type=type,completed_at=None).order_by('order', '-id')
+        tasks = request.user.task_set.all().filter(type=type,completed_at=None).order_by('order', '-id')
     else:
-        tasks = Task.objects.filter(user__pk=request.user.pk, type=type).order_by('order', '-id')
+        tasks = request.user.task_set.all().filter(type=type).order_by('order', '-id')
 
     context = {'tasks': tasks, 'all': True, 'type': type}
     return render(request, 'tasks/task.html', context)
 
 
 def getRewards(request):
-    rewards = Reward.objects.filter(user__pk=request.user.pk).order_by('order', '-id')
+    rewards = request.user.reward_set.all().order_by('order', '-id')
     context = {'tasks': rewards, 'all': True, 'type': 4}
     return render(request, 'tasks/task.html', context)
 
@@ -56,7 +61,7 @@ def addTask(request):
     gain = request.GET['gain']
     User = request.user;
     task = User.task_set.create(title=title, type=type, value=gain)
-    request.user.log_set.create(record="Added task:"+task.title+" With pay:"+task.value);
+    request.user.log_set.create(record="Added task:"+task.title+" With pay: "+task.value);
     tasks = [task]
     context = {'tasks': tasks, 'all': False}
     rendered = render_to_string('tasks/task.html', context)
@@ -69,7 +74,7 @@ def addReward(request):
     cost = request.GET['gain']
     User = request.user;
     reward = User.reward_set.create(title=title, cost=cost)
-    request.user.log_set.create(record="Added reward:"+reward.title+" With pay:"+reward.cost);
+    request.user.log_set.create(record="Added reward: "+reward.title+" With pay: "+reward.cost);
     rewards = [reward]
     context = {'tasks': rewards, 'all': False}
     rendered = render_to_string('tasks/task.html', context)
@@ -135,7 +140,7 @@ def completeTask(request):
 
     task = request.user.task_set.filter(pk=id)
     task.update(completed_at=timezone.now())
-    request.user.log_set.create(record="Task done:"+task.get().title+" Won:"+str(task.get().value));
+    request.user.log_set.create(record="Task done: "+task.get().title+" Won: "+str(task.get().value));
 
     profile = request.user.get_profile();
     profile.credits += task.get().value;
@@ -154,7 +159,7 @@ def buyReward(request):
     profile = request.user.get_profile()
     profile.credits -= reward.get().cost
 
-    request.user.log_set.create(record="Bought reward:"+reward.get().title+" cost:"+str(reward.get().cost));
+    request.user.log_set.create(record="Bought reward: "+reward.get().title+" cost: "+str(reward.get().cost));
 
     if id == 1:
         profile.hp += 10

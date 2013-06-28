@@ -43,6 +43,7 @@ class Task(models.Model):
     completed_at = models.DateTimeField(blank=True, null=True)
     created_at = models.DateTimeField(default=timezone.now())
     repeat_rate = models.IntegerField(default=0)
+    minutes = models.IntegerField(default=0)
 
     todo = 0
     habit = 1
@@ -62,9 +63,6 @@ class Task(models.Model):
         return False
 
 
-        #return self.completed_at >= timezone.now() - datetime.timedelta(days=1)
-
-
 class Reward(models.Model):
     user = models.ForeignKey(User)
     title = models.CharField(max_length=117)
@@ -72,10 +70,11 @@ class Reward(models.Model):
     order = models.IntegerField(default=0)
     created_at = models.DateTimeField(default=timezone.now())
     expire_at = models.DateTimeField(default=timezone.now(),blank=True)
+    minutes = models.IntegerField(default=0)
     def __unicode__(self):
         return self.title
 
-class log(models.Model):
+class Log(models.Model):
     user = models.ForeignKey(User)
     record = models.CharField(max_length=1000)
     date = models.DateTimeField(default=timezone.now())

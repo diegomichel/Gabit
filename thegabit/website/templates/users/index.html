@@ -23,6 +23,23 @@
             initDialogs();
             User.login();
         });
+        /*
+            Logs
+         */
+        $(function () {
+            $(window).keypress(function(e) {
+               if (e.which == 96 || e.which == 126) {
+                   $.get("getLogs").done(function(data){
+                        $('div#console div#window').html(data);
+                        $("div#window").animate({scrollTop:10000000}, 'slow');
+                   }).fail(function(){
+                        location.reload();
+                   });
+                   $('#console').slideToggle();
+               }
+            });
+        });
+
 
         var User = {
             login: function () {
@@ -143,6 +160,10 @@
     The TODO Item will be removed from the list.
 </div>
 
-
+<div id=console>
+    <div id="window">
+        ...
+    </div>
+</div>
 </body>
 </html>

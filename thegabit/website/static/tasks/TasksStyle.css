@@ -228,3 +228,28 @@ fieldset{
     right: 128;
     top:0;
 }
+#console{
+    background:rgba(0, 0, 0, 0.67);
+    height:300px;
+    width:100%;
+    top:0px;
+    left:0px;
+    position:fixed;
+    z-index:999;
+    display:none;
+    color:#fff;
+    text-align:left;
+    overflow: hidden;
+}
+#window{
+    width:98%;
+    margin:5px auto 1px auto;
+    background:rgba(0, 0, 0, 0.75);
+    height:270px;
+    padding:8px;
+    color: #cbcbcb;
+    font-size:9pt;
+    font-family:courier;
+    overflow-y: scroll;
+    text-shadow: 0.05em 0.05em 0.01em white;
+}

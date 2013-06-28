@@ -19,6 +19,7 @@ urlpatterns = patterns('',
     url(r'^deleteReward/$', 'website.views.deleteReward', name='deleteReward'),
     url(r'^completeTask/$', 'website.views.completeTask'),
     url(r'^buyReward/$', 'website.views.buyReward'),
+    url(r'^getLogs/$', 'website.views.getLogs'),
 
 
     (r'^accounts/login/$', 'django.contrib.auth.views.login'),
