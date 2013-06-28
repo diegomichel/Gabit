@@ -253,3 +253,21 @@ fieldset{
     overflow-y: scroll;
     text-shadow: 0.05em 0.05em 0.01em white;
 }
+#xEffect{
+    position: fixed;
+    padding-top: 30%;
+    right: 0;
+    top: 0;
+    z-index: 999;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.80);
+    color: white;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 5em;
+}
+#textEffect span{
+    color: white;
+    text-shadow: 0.01em 0.01em 0.08em white;
+}

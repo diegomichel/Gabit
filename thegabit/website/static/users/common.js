@@ -32,22 +32,22 @@ function alerta(output_msg, title_msg) {
     });
 }
 function initDialogs() {
-    $( "#dialog-confirm-todo" ).dialog({
-      autoOpen: false,
-      resizable: false,
-      width:'auto',
-      height:'auto',
-      modal: true,
-      buttons: {
-        "Accept": function() {
-          Tasks.complete($(this).data("ui"));
-          $(this).data("ui").remove();
-          $( this ).dialog( "close" );
-        },
-        Cancel: function() {
-          $( this ).dialog( "close" );
+    $("#dialog-confirm-todo").dialog({
+        autoOpen: false,
+        resizable: false,
+        width: 'auto',
+        height: 'auto',
+        modal: true,
+        buttons: {
+            "Accept": function () {
+                Tasks.complete($(this).data("ui"));
+                $(this).data("ui").remove();
+                $(this).dialog("close");
+            },
+            Cancel: function () {
+                $(this).dialog("close");
+            }
         }
-      }
     });
 
     $("div#dialogAddTask").dialog({
@@ -72,8 +72,7 @@ function initDialogs() {
             $("div#dialogAddTask form fieldset input#value").val("10");
             $("div#dialogAddTask form fieldset input#value").select();
 
-            if(parseInt($(this).data('type')) == 4)
-            {
+            if (parseInt($(this).data('type')) == 4) {
                 $("div#dialogAddTask form fieldset label").html("Cost");
             }
         },
@@ -95,4 +94,28 @@ function makeDarker(obj) {
     var green = parseInt(parseInt(values[1]) * 1.20);
     var blue = parseInt(parseInt(values[2]) * 1.20);
     obj.css("background-color", "rgb(" + red + "," + green + "," + blue + ")");
+}
+
+function extraCreditsEffect(credits) {
+    $("#xEffect").fadeIn('slow').effect('pulsate', 'slow').fadeOut('slow');
+    $("#textEffect").html("You won " + credits + " extra credits!");
+    fx($("#textEffect"));
+}
+
+function fx(o) {
+    var $o = $(o);
+    $o.html($o.text().replace(/([\S])/g, '<span>$1</span>'));
+    $o.css('position', 'relative');
+    $('span', $o).stop().css({position: 'relative',
+        opacity: 0,
+        fontSize: 84,
+        top: function (i) {
+            return Math.floor(Math.random() * 500) * ((i % 2) ? 1 : -1);
+        },
+        left: function (i) {
+            return Math.floor(Math.random() * 500) * ((i % 2) ? 1 : -1);
+        }
+
+    }).animate({opacity: 1, top: 0, left: 0}, 1000);
+
 }

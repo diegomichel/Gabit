@@ -20,8 +20,15 @@
             $("div#credits").hide();
             $("div#avatar").hide();
             $("div#userOptions").hide();
+            $("#xEffect").hide();
             initDialogs();
             User.login();
+        });
+        /*
+            Extra effect
+         */
+        $(function () {
+            //extraCreditsEffect(99);
         });
         /*
             Logs
@@ -165,5 +172,11 @@
         ...
     </div>
 </div>
+
+<div id=activate style="color: blue;cursor:hand">
+    Click me to activate
+</div>
+<div id=xEffect ><span id=textEffect></span></div>
+
 </body>
 </html>

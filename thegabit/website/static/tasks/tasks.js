@@ -23,6 +23,8 @@ var Tasks = {
                 $("#hp span").html(values.hp);
                 $("#credits").effect( 'bounce', {}, 500 );
                 $(id).effect( 'highlight', 'slow' );
+                if(parseInt(values.extra_credits) > 0)
+                    extraCreditsEffect(parseInt(values.extra_credits));
             }
         ).fail(function () {
                 location.reload();
