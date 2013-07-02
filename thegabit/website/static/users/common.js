@@ -97,7 +97,7 @@ function makeDarker(obj) {
 }
 
 function extraCreditsEffect(credits) {
-    $("#xEffect").fadeIn('slow').effect('pulsate', 'slow').fadeOut('slow');
+    $("#xEffect").delay(666).fadeIn('slow').effect('pulsate', 'slow').fadeOut('slow');
     $("#textEffect").html("You won " + credits + " extra credits!");
     fx($("#textEffect"));
 }

@@ -11,7 +11,7 @@ var Tasks = {
                 location.reload();
             })
         }
-        $("body").effect( 'highlight', 'slow' );
+        $("body").effect('highlight', 'slow');
     },
 
     complete: function (id) {
@@ -19,11 +19,14 @@ var Tasks = {
             {id: id.id},
             function (data) {
                 var values = $.parseJSON(data);
+                originalCredits = parseInt($("#credits span").html());
                 $("#credits span").html(values.credits);
                 $("#hp span").html(values.hp);
-                $("#credits").effect( 'bounce', {}, 500 );
-                $(id).effect( 'highlight', 'slow' );
-                if(parseInt(values.extra_credits) > 0)
+                $("#credits").effect('bounce', {}, 500);
+                $(id).effect('highlight', 'slow');
+                $("#creditsEffect").html("+".concat(parseInt(values.credits) - originalCredits));
+                $("#creditsEffect").fadeIn().effect('puff', {'percent': 400}, 1000);
+                if (parseInt(values.extra_credits) > 0)
                     extraCreditsEffect(parseInt(values.extra_credits));
             }
         ).fail(function () {
@@ -32,13 +35,12 @@ var Tasks = {
     },
     buyReward: function (id) {
         var credits = parseInt($("#credits span").html());
-        var cost = parseInt($("dd#"+id.id+" ul li span").html());
-        if(cost > credits){
+        var cost = parseInt($("dd#" + id.id + " ul li span").html());
+        if (cost > credits) {
             alerta("You dont have enougth credit's, try completing some habit's");
             return;
         }
-        if(id.id == 1 && parseInt($("#hp span").html()) == 100)
-        {
+        if (id.id == 1 && parseInt($("#hp span").html()) == 100) {
             alerta("You'r hp is full");
             return;
         }
@@ -48,8 +50,8 @@ var Tasks = {
                 var values = $.parseJSON(data);
                 $("#credits span").html(values.credits);
                 $("#hp span").html(values.hp);
-                $("#credits").effect( 'bounce', 'slow' );
-                $(id).effect( 'highlight', 'slow' );
+                $("#credits").effect('bounce', 'slow');
+                $(id).effect('highlight', 'slow');
             }
         ).fail(function () {
                 location.reload();
@@ -67,6 +69,7 @@ var Tasks = {
                     activate: function (event, ui) {
                         $("#trash").fadeIn();
                         $("#reward").fadeIn();
+                        $(this).data('out', 0);
                     },
                     deactivate: function (event, ui) {
                         $("#trash").fadeOut();
@@ -77,13 +80,37 @@ var Tasks = {
                         if (newOrder == "") return;
 
 
+                        if ($(this).data('out') == 1)  $("dl#list4").sortable("cancel");
+
                         $.get('saveRewardsOrder/', {order: newOrder},function (result) {
                         }).fail(function () {
                                 location.reload();
                             });
                     },
+                    out: function (event, ui) {
+                        //alert("element out of the list.");
+                        $(this).data('out', 1);
+                    },
                     items: "dd:not(.wontMove)"
                 });
+
+                $("#habit_title" + 4).on("keyup", function () {
+                    var text = $(this).val().toLowerCase();
+                    $("dl#list" + 4 + " > dd").each(function () {
+                        if ($(this).text().toLowerCase().indexOf(text) == -1)
+                            $(this).hide();
+                        else
+                            $(this).show();
+                    });
+                });
+
+                $("dl#list" + 4 + " dd").on("mouseup", function () {
+                    $("#habit_title" + 4).val("");
+                    $("dl#list" + 4 + " > dd").each(function () {
+                        $(this).show();
+                    });
+                })
+
                 $("dl#list4").disableSelection().hide().fadeIn();
                 Tasks.add();
             })
@@ -117,6 +144,26 @@ var Tasks = {
                     },
                     items: "dd"
                 });
+
+
+                $("#habit_title" + id).on("keyup", function () {
+                    var text = $(this).val().toLowerCase();
+                    $("dl#list" + id + " > dd").each(function () {
+                        if ($(this).text().toLowerCase().indexOf(text) == -1)
+                            $(this).hide();
+                        else
+                            $(this).show();
+                    });
+                });
+
+                $("dl#list" + id + " dd").on("mouseup", function () {
+                    $("#habit_title" + id).val("");
+                    $("dl#list" + id + " > dd").each(function () {
+                        $(this).show();
+                    });
+                })
+
+
                 $("dl#list" + id).disableSelection().hide().fadeIn();
                 if (id == 1)
                     Tasks.loadHelper(2);
@@ -131,6 +178,7 @@ var Tasks = {
     load: function () {
         if (!loged) return;
         Tasks.loadHelper(1);
+        $("body").fadeIn();
     },
     /*
      This does not add on call, but add the handler for the events of the buttons that add new tasks.
@@ -175,7 +223,7 @@ var Tasks = {
             })
 
     },
-   addRequest: function (type) {
+    addRequest: function (type) {
         var habit_title = $("#habit_title" + type).val();
         if (habit_title === "") {
             alerta("Please write something.");

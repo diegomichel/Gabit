@@ -7,7 +7,7 @@ admin.autodiscover()
 urlpatterns = patterns('',
     # Examples:
     url(r'^$', 'website.views.index', name='index'),
-    url(r'^login$',  'website.views.loginUser', name='loginUser'),
+
     url(r'^logout$',  'website.views.logoutUser', name='logoutUser'),
     url(r'^gettasks$', 'website.views.getTasks', name='getTasks'),
     url(r'^getRewards$', 'website.views.getRewards', name='getRewards'),
@@ -20,6 +20,9 @@ urlpatterns = patterns('',
     url(r'^completeTask/$', 'website.views.completeTask'),
     url(r'^buyReward/$', 'website.views.buyReward'),
     url(r'^getLogs/$', 'website.views.getLogs'),
+
+    url(r'^register/$', 'website.views.register'),
+    url(r'^login$',  'website.views.loginUser', name='loginUser'),
 
 
     (r'^accounts/login/$', 'django.contrib.auth.views.login'),

@@ -1,5 +1,6 @@
 body {
     font-size: 10px;
+    display: none;
 }
 
 #content {
@@ -270,4 +271,34 @@ fieldset{
 #textEffect span{
     color: white;
     text-shadow: 0.01em 0.01em 0.08em white;
+}
+#creditsEffect{
+    color: #58fffa;
+    width: auto;
+    top: 40%;
+    right: 50%;
+    position: fixed;
+    font-size: 5em;
+    text-shadow: 0em 0em 0.18em black;
+}
+form#login{
+    width: 100%;
+    margin: auto;
+}
+
+form#login table{
+}
+form#login label, form#login input{
+   font-size: 1em;
+   text-shadow: 0em 0em 0.08em black;
+}
+
+button#buttonRegister{
+    position: fixed;
+    top: 5px;
+    right: 5px;
+}
+input#buttonLogin{
+    padding: 10px;
+    margin-top: 20px;
 }

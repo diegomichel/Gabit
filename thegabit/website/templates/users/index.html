@@ -4,9 +4,11 @@
     <link rel="stylesheet" href="{% static 'users/jquery-ui.css' %}"/>
     <script src="{% static 'users/jquery-1.9.1.js' %}"></script>
     <script src="{% static 'users/jquery-ui.js' %}"></script>
+    <script src="{% static 'users/jquery.ui.touch-punch.min.js' %}"></script>
     <script src="{% static 'users/common.js' %}"></script>
     <script src="{% static 'tasks/tasks.js' %}"></script>
     <script src="{% static 'tasks/tasksButtons.js' %}"></script>
+    <script src="{% static 'users/login.js' %}"></script>
     <script src="{% static 'tasks/jquery.timeTo.js' %}"></script>
     <script src="{% static 'tasks/timer.js' %}"></script>
     <link rel="stylesheet" href="{% static 'users/UsersStyle.css' %}"/>
@@ -19,16 +21,11 @@
             $("div#hp").hide();
             $("div#credits").hide();
             $("div#avatar").hide();
-            $("div#userOptions").hide();
+            //$("div#userOptions").hide();
             $("#xEffect").hide();
+            $("#creditsEffect").hide();
             initDialogs();
             User.login();
-        });
-        /*
-            Extra effect
-         */
-        $(function () {
-            //extraCreditsEffect(99);
         });
         /*
             Logs
@@ -51,14 +48,14 @@
         var User = {
             login: function () {
                 $.ajax({
-                    type: "POST",
+                    type: "GET",
                     url: "login",
-                    data: {csrfmiddlewaretoken: '{{csrf_token}}', username: '', password: '' },
+                    data: {},
                     error: function (request, status, error) {
                         alert(request.responseText);
                     }
                 }).done(function (msg) {
-                            if (msg != "False") {
+                            try {
                                 var user = $.parseJSON(msg);
                                 loged = true;
                                 $("div#userOptions").append("<a id=logoutButton href=#>Logout</a>");
@@ -70,19 +67,16 @@
                                 $("div#credits span").text(user[0].fields.credits);
                                 $("div#avatar").fadeIn();
                             }
-                            else {
-                                $.ajax({
-                                    type: "GET",
-                                    url: "accounts/login/",
-                                    data: {csrfmiddlewaretoken: '{{csrf_token}}'},
-                                    error: function (request, status, error) {
-                                        alerta(request.responseText);
-                                    }
-                                }).done(function (msg) {
-                                            $("div#header").html("<h1>Ready to Game?</h1>");
-                                            $("div#content").html(msg);
-                                        })
-
+                            catch (e) {
+                                $("div#header").css('text-align', 'center');
+                                $("div#content").css('text-align', 'center');
+                                $("div#header").html("<h1 id=login>Ready to Game?</h1>");
+                                $("div#content").html(msg);
+                                $("body").fadeIn();
+                                $("button#buttonLogin").button().click(function (event) {
+                                    event.preventDefault();
+                                    response = Login.request();
+                                })
                             }
                         })
             },
@@ -126,7 +120,7 @@
 </div>
 
 <div id=dialogAddTask title="New Task">
-    <p class="validateTips">positive number for good habits, negative number for bad habits.</p>
+    <p class="validateTips">Clear and short!.</p>
     <dl class="list_habit ui-sortable" id="list2" style="display: inline-block;">
     <dd class="task" id="44" style="zoom: 0.7">
         <ul>
@@ -173,10 +167,8 @@
     </div>
 </div>
 
-<div id=activate style="color: blue;cursor:hand">
-    Click me to activate
-</div>
 <div id=xEffect ><span id=textEffect></span></div>
+<span id=creditsEffect>x</span>
 
 </body>
 </html>

@@ -4,17 +4,94 @@ import json
 import random
 
 from django.contrib.auth import authenticate, login, logout
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
 from django.core import serializers
 from django.template.loader import render_to_string
 from django.utils import timezone
+from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 
 from website.models import Task
 
 
 def index(request):
     return render(request, 'users/index.html', {})
+
+
+def loginUser(request):
+    if request.user.is_authenticated():
+        request.user.log_set.create(record="User Authenticated");
+        return HttpResponse(serializers.serialize("json", [request.user.get_profile()]))
+
+    if request.method == 'POST':
+        form = AuthenticationForm(data=request.POST)
+        if form.is_valid():
+            if request.user.is_authenticated():
+                request.user.log_set.create(record="User Authenticated");
+                return HttpResponse(serializers.serialize("json", [request.user.get_profile()]))
+
+            try:
+                username = request.POST['username']
+                password = request.POST['password']
+            except NameError:
+                return HttpResponse(serializers.serialize("json", [request.user.get_profile()]))
+
+            user = authenticate(username=username, password=password)
+            if user is not None:
+                login(request, user)
+                return HttpResponse(serializers.serialize("json", [request.user.get_profile()]))
+            else:
+                return HttpResponse("False")
+        else:
+            form = AuthenticationForm(data=request.POST)
+    else:
+        form = AuthenticationForm()
+
+    return render(request, "registration/login.html", {
+        'form': form,
+    })
+    # if request.user.is_authenticated():
+    #     request.user.log_set.create(record="User Authenticated");
+    #     return HttpResponse(serializers.serialize("json", [request.user.get_profile()]))
+    #
+    # try:
+    #     username = request.POST['username']
+    #     password = request.POST['password']
+    # except NameError:
+    #     return HttpResponse(serializers.serialize("json", [request.user.get_profile()]))
+    #
+    # user = authenticate(username=username, password=password)
+    # if user is not None:
+    #     login(request, user)
+    #     return HttpResponse(serializers.serialize("json", [request.user.get_profile()]))
+    # else:
+    #     return HttpResponse("False")
+
+
+def logoutUser(request):
+    context = {'value': True}
+    if request.user.is_authenticated():
+        logout(request)
+        return render(request, 'users/blank.html', context)
+    return render(request, 'users/blank.html', context)
+
+
+def register(request):
+    if request.method == 'POST':
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            new_user = form.save()
+            username = request.POST['username']
+            password = request.POST['password1']
+            user = authenticate(username=username, password=password)
+            if user is not None:
+                login(request, user)
+            return HttpResponseRedirect("/")
+    else:
+        form = UserCreationForm()
+    return render(request, "registration/register.html", {
+        'form': form,
+    })
 
 
 def getLogs(request):
@@ -110,38 +187,14 @@ def saveRewardsOrder(request):
     return render(request, 'users/blank.html', {'value': 1})
 
 
-def loginUser(request):
-    if request.user.is_authenticated():
-        request.user.log_set.create(record="User Authenticated");
-        return HttpResponse(serializers.serialize("json", [request.user.get_profile()]))
-
-    try:
-        username = request.POST['username']
-        password = request.POST['password']
-    except NameError:
-        return HttpResponse(serializers.serialize("json", [request.user.get_profile()]))
-
-    user = authenticate(username=username, password=password)
-    if user is not None:
-        login(request, user)
-        return HttpResponse(serializers.serialize("json", [request.user.get_profile()]))
-    else:
-        return HttpResponse("False")
-
-
-def logoutUser(request):
-    context = {'value': True}
-    if request.user.is_authenticated():
-        logout(request)
-        return render(request, 'users/blank.html', context)
-    return render(request, 'users/blank.html', context)
-
-
 def completeTask(request):
     id = request.GET['id']
 
     task = request.user.task_set.filter(pk=id)
+
     task.update(completed_at=timezone.now())
+    task.update(uses=task.get().uses + 1)
+
     request.user.log_set.create(record="Task done: " + task.get().title + " Won: " + str(task.get().value));
 
     profile = request.user.get_profile();
@@ -165,6 +218,7 @@ def buyReward(request):
     id = request.GET['id']
 
     reward = request.user.reward_set.filter(pk=id)
+    reward.update(uses=reward.get().uses + 1)
 
     profile = request.user.get_profile()
     profile.credits -= reward.get().cost
