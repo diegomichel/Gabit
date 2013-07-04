@@ -2,17 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8e1279c9-bbe4-4643-9e7a-6572857d06f1" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/website/static/users/login.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/website/templates/registration/register.html" />
-      <change type="DELETED" beforePath="C:\Python27\theGabit\thegabit\theGabit2.db" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/website/static/users/register.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/theGabit2.db" afterPath="$PROJECT_DIR$/theGabit2.db" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website/static/tasks/TasksStyle.css" afterPath="$PROJECT_DIR$/website/static/tasks/TasksStyle.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website/static/users/common.js" afterPath="$PROJECT_DIR$/website/static/users/common.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website/templates/tasks/habits.html" afterPath="$PROJECT_DIR$/website/templates/tasks/habits.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website/templates/users/index.html" afterPath="$PROJECT_DIR$/website/templates/users/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website/templates/registration/login.html" afterPath="$PROJECT_DIR$/website/templates/registration/login.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website/models.py" afterPath="$PROJECT_DIR$/website/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website/static/tasks/tasks.js" afterPath="$PROJECT_DIR$/website/static/tasks/tasks.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thegabit/urls.py" afterPath="$PROJECT_DIR$/thegabit/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website/static/users/login.js" afterPath="$PROJECT_DIR$/website/static/users/login.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website/templates/registration/register.html" afterPath="$PROJECT_DIR$/website/templates/registration/register.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website/views.py" afterPath="$PROJECT_DIR$/website/views.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -23,8 +18,8 @@
     <file path="/urls.py" changelist="8e1279c9-bbe4-4643-9e7a-6572857d06f1" time="1372683926278" ignored="false" />
     <file path="/models.py" changelist="8e1279c9-bbe4-4643-9e7a-6572857d06f1" time="1372514662684" ignored="false" />
     <file path="/admin.py" changelist="8e1279c9-bbe4-4643-9e7a-6572857d06f1" time="1371889757691" ignored="false" />
-    <file path="/views.py" changelist="8e1279c9-bbe4-4643-9e7a-6572857d06f1" time="1372803305206" ignored="false" />
-    <file path="/index.html" changelist="8e1279c9-bbe4-4643-9e7a-6572857d06f1" time="1372802196503" ignored="false" />
+    <file path="/views.py" changelist="8e1279c9-bbe4-4643-9e7a-6572857d06f1" time="1372957559873" ignored="false" />
+    <file path="/index.html" changelist="8e1279c9-bbe4-4643-9e7a-6572857d06f1" time="1372958133139" ignored="false" />
     <file path="/tasks.html" changelist="8e1279c9-bbe4-4643-9e7a-6572857d06f1" time="1372141747613" ignored="false" />
     <file path="/style.css" changelist="8e1279c9-bbe4-4643-9e7a-6572857d06f1" time="1371962878871" ignored="false" />
     <file path="/init.js" changelist="8e1279c9-bbe4-4643-9e7a-6572857d06f1" time="1371769443345" ignored="false" />
@@ -36,7 +31,7 @@
     <file path="/habits.html" changelist="8e1279c9-bbe4-4643-9e7a-6572857d06f1" time="1372145085620" ignored="false" />
     <file path="/tasks.js" changelist="8e1279c9-bbe4-4643-9e7a-6572857d06f1" time="1372519392954" ignored="false" />
     <file path="/task.html" changelist="8e1279c9-bbe4-4643-9e7a-6572857d06f1" time="1372269801704" ignored="false" />
-    <file path="/TasksStyle.css" changelist="8e1279c9-bbe4-4643-9e7a-6572857d06f1" time="1372686635802" ignored="false" />
+    <file path="/TasksStyle.css" changelist="8e1279c9-bbe4-4643-9e7a-6572857d06f1" time="1372958153944" ignored="false" />
     <file path="/common.js" changelist="8e1279c9-bbe4-4643-9e7a-6572857d06f1" time="1372369162158" ignored="false" />
     <file path="/tasksButtons.js" changelist="8e1279c9-bbe4-4643-9e7a-6572857d06f1" time="1372369085289" ignored="false" />
     <file path="/example.html" changelist="8e1279c9-bbe4-4643-9e7a-6572857d06f1" time="1372347093999" ignored="false" />
@@ -47,7 +42,8 @@
     <file path="$PROJECT_DIR$/../../personal/thegabit/website/models.py" changelist="8e1279c9-bbe4-4643-9e7a-6572857d06f1" time="1372424847740" ignored="false" />
     <file path="/logs.html" changelist="8e1279c9-bbe4-4643-9e7a-6572857d06f1" time="1372429122157" ignored="false" />
     <file path="/tablet.js" changelist="8e1279c9-bbe4-4643-9e7a-6572857d06f1" time="1372455273189" ignored="false" />
-    <file path="/register.html" changelist="8e1279c9-bbe4-4643-9e7a-6572857d06f1" time="1372684746165" ignored="false" />
+    <file path="/register.html" changelist="8e1279c9-bbe4-4643-9e7a-6572857d06f1" time="1372862377769" ignored="false" />
+    <file path="/register.js" changelist="8e1279c9-bbe4-4643-9e7a-6572857d06f1" time="1372958202859" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +71,7 @@
       <file leaf-file-name="TasksStyle.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/website/static/tasks/TasksStyle.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="289" column="0" selection-start="4864" selection-end="4864" vertical-scroll-proportion="0.0">
+            <state line="297" column="40" selection-start="5102" selection-end="5102" vertical-scroll-proportion="-7.28">
               <folding />
             </state>
           </provider>
@@ -84,7 +80,7 @@
       <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/website/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="84" column="46" selection-start="3026" selection-end="3026" vertical-scroll-proportion="0.0">
+            <state line="93" column="6" selection-start="3339" selection-end="3339" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#26#39#0" expanded="true" />
               </folding>
@@ -113,16 +109,16 @@
       <file leaf-file-name="register.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/website/templates/registration/register.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="52" selection-start="161" selection-end="172" vertical-scroll-proportion="-3.2692308">
+            <state line="4" column="0" selection-start="143" selection-end="143" vertical-scroll-proportion="-2.6153846">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/website/templates/users/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="33" selection-start="523" selection-end="528" vertical-scroll-proportion="0.33190578">
+            <state line="175" column="21" selection-start="6591" selection-end="6591" vertical-scroll-proportion="-7.3137255">
               <folding>
                 <element signature="n#style#0;n#dl#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#dd#0;n#dl#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -131,10 +127,19 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="register.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/website/static/users/register.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="3" column="35" selection-start="141" selection-end="141" vertical-scroll-proportion="0.09107143">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="login.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/website/static/users/login.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="51" selection-start="840" selection-end="840" vertical-scroll-proportion="0.0">
+            <state line="4" column="62" selection-start="49" selection-end="199" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -144,15 +149,6 @@
         <entry file="file://$PROJECT_DIR$/website/static/users/common.js">
           <provider selected="true" editor-type-id="text-editor">
             <state line="97" column="0" selection-start="3067" selection-end="3067" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="habits.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/website/templates/tasks/habits.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="60" selection-start="373" selection-end="373" vertical-scroll-proportion="-2.6153846">
               <folding />
             </state>
           </provider>
@@ -185,30 +181,30 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/website/static/tasks/timer.js" />
-        <option value="$PROJECT_DIR$/website/templates/tasks/task.html" />
         <option value="$PROJECT_DIR$/website/templates/users/logs.html" />
         <option value="$PROJECT_DIR$/website/static/users/common.js" />
         <option value="$PROJECT_DIR$/website/static/tasks/tasksButtons.js" />
         <option value="$PROJECT_DIR$/website/static/users/tablet.js" />
         <option value="$PROJECT_DIR$/website/models.py" />
         <option value="$PROJECT_DIR$/website/templates/tasks/habits.html" />
-        <option value="$PROJECT_DIR$/website/static/tasks/TasksStyle.css" />
         <option value="$PROJECT_DIR$/website/static/tasks/tasks.js" />
         <option value="$PROJECT_DIR$/thegabit/urls.py" />
         <option value="$PROJECT_DIR$/website/templates/registration/login.html" />
-        <option value="$PROJECT_DIR$/website/templates/users/index.html" />
         <option value="$PROJECT_DIR$/website/static/tasks/login.js" />
         <option value="$PROJECT_DIR$/website/templates/registration/register.html" />
+        <option value="$PROJECT_DIR$/website/static/users/login.js" />
         <option value="$PROJECT_DIR$/website/views.py" />
+        <option value="$PROJECT_DIR$/website/templates/users/index.html" />
+        <option value="$PROJECT_DIR$/website/static/tasks/TasksStyle.css" />
+        <option value="$PROJECT_DIR$/website/static/users/register.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
+    <option name="x" value="1672" />
     <option name="y" value="-8" />
-    <option name="width" value="1696" />
-    <option name="height" value="1026" />
+    <option name="width" value="1296" />
+    <option name="height" value="1000" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -609,19 +605,19 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
+    <frame x="1672" y="-8" width="1296" height="1000" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17898384" sideWeight="0.753366" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32986537" sideWeight="0.8210162" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15361077" sideWeight="0.6281755" order="4" side_tool="false" content_ui="tabs" x="1029" y="133" width="408" height="711" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15483476" sideWeight="0.6281755" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20340356" sideWeight="0.7380952" order="4" side_tool="false" content_ui="tabs" x="1029" y="133" width="408" height="711" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20502432" sideWeight="0.7380952" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2990762" sideWeight="0.24663402" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.37182447" sideWeight="0.6787026" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26190478" sideWeight="0.6787026" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -692,16 +688,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/website/templates/users/logs.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="19" selection-start="41" selection-end="41" vertical-scroll-proportion="-0.65384614" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../personal/thegabit/website/static/tasks/tasks.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="6" selection-start="451" selection-end="451" vertical-scroll-proportion="0.2720848" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/website/static/tasks/tasksButtons.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="43" column="24" selection-start="1379" selection-end="1379" vertical-scroll-proportion="0.0">
@@ -719,13 +705,6 @@
     <entry file="file://$PROJECT_DIR$/website/templates/tasks/task.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="4" selection-start="205" selection-end="228" vertical-scroll-proportion="-6.0384617">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/website/static/tasks/TasksStyle.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="289" column="0" selection-start="4864" selection-end="4864" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -758,17 +737,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/website/templates/registration/login.html">
+    <entry file="file://$PROJECT_DIR$/website/static/users/UsersStyle.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="22" selection-start="268" selection-end="268" vertical-scroll-proportion="-5.230769">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website/static/users/login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="62" selection-start="49" selection-end="199" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/website/templates/registration/register.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="52" selection-start="161" selection-end="172" vertical-scroll-proportion="-3.2692308">
+        <state line="4" column="0" selection-start="143" selection-end="143" vertical-scroll-proportion="-2.6153846">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="93" column="6" selection-start="3339" selection-end="3339" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#26#39#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -779,29 +774,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/website/views.py">
+    <entry file="file://$PROJECT_DIR$/website/templates/registration/login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="84" column="46" selection-start="3026" selection-end="3026" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#26#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/website/static/users/login.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="51" selection-start="840" selection-end="840" vertical-scroll-proportion="0.0">
+        <state line="8" column="22" selection-start="268" selection-end="268" vertical-scroll-proportion="-5.230769">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/website/templates/users/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="33" selection-start="523" selection-end="528" vertical-scroll-proportion="0.33190578">
+        <state line="175" column="21" selection-start="6591" selection-end="6591" vertical-scroll-proportion="-7.3137255">
           <folding>
             <element signature="n#style#0;n#dl#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#dd#0;n#dl#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website/static/tasks/TasksStyle.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="297" column="40" selection-start="5102" selection-end="5102" vertical-scroll-proportion="-7.28">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website/static/users/register.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="35" selection-start="141" selection-end="141" vertical-scroll-proportion="0.09107143">
+          <folding />
         </state>
       </provider>
     </entry>

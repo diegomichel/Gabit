@@ -1,7 +1,5 @@
-  <h1>Create an account</h1>
-
-  <form id=register action="" method="post">
+<form id=register action="" method="post">
       {% csrf_token %}
       {{ form.as_p }}
-      <input type="submit" value="Create the account">
-  </form>
+      <button id="buttonCreateAccount">Create</button>
+</form>

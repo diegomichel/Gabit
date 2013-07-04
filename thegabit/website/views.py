@@ -86,7 +86,7 @@ def register(request):
             user = authenticate(username=username, password=password)
             if user is not None:
                 login(request, user)
-            return HttpResponseRedirect("/")
+            return HttpResponse("yes")
     else:
         form = UserCreationForm()
     return render(request, "registration/register.html", {

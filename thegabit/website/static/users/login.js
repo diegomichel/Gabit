@@ -3,8 +3,6 @@ var Login = {
         var username = $("#id_username").val();
         var password = $("#id_password").val();
         var csrv = $("input[name=csrfmiddlewaretoken]").val();
-        console.log(username + password + csrv);
-
         $.ajax({
             type: "POST",
             url: "login",

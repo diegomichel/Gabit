@@ -8,6 +8,7 @@
     <script src="{% static 'users/common.js' %}"></script>
     <script src="{% static 'tasks/tasks.js' %}"></script>
     <script src="{% static 'tasks/tasksButtons.js' %}"></script>
+    <script src="{% static 'users/register.js' %}"></script>
     <script src="{% static 'users/login.js' %}"></script>
     <script src="{% static 'tasks/jquery.timeTo.js' %}"></script>
     <script src="{% static 'tasks/timer.js' %}"></script>
@@ -24,6 +25,7 @@
             //$("div#userOptions").hide();
             $("#xEffect").hide();
             $("#creditsEffect").hide();
+
             initDialogs();
             User.login();
         });
@@ -68,6 +70,7 @@
                                 $("div#avatar").fadeIn();
                             }
                             catch (e) {
+                                $("#buttonRegister").fadeIn();
                                 $("div#header").css('text-align', 'center');
                                 $("div#content").css('text-align', 'center');
                                 $("div#header").html("<h1 id=login>Ready to Game?</h1>");
@@ -169,6 +172,8 @@
 
 <div id=xEffect ><span id=textEffect></span></div>
 <span id=creditsEffect>x</span>
+<button id=buttonRegister>New?</button>
+<button id=buttonBack>Back</button>
 
 </body>
 </html>
