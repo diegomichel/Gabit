@@ -193,7 +193,7 @@ def completeTask(request):
     task = request.user.task_set.filter(pk=id)
 
     task.update(completed_at=timezone.now())
-    task.update(uses=task.get().uses + 1)
+    task.update(numTimesCompleted=task.get().numTimesCompleted + 1)
 
     request.user.log_set.create(record="Task done: " + task.get().title + " Won: " + str(task.get().value));
 

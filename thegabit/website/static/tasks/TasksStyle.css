@@ -335,3 +335,13 @@ form#login label, #form#register label{
     display:inline-block;
     text-align: right;
 }
+#numCompletedTimes{
+    position: relative;
+    float: right;
+    font-size: 0.5em;
+    color: rgba(0, 0, 0, 0.67);
+    margin-top: -0.5em;
+    padding:2px;
+    margin-right: -0.2em;
+    font-weight: normal;
+}

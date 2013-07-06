@@ -11,10 +11,14 @@
     {% for task in tasks %}
         <dd class="task {% if task.completed_today %}taskDone{% endif %}" id={{ task.id }}>
         <ul>
+        <li class=taskText>{{ task.title }}</li>
             {% if task.cost %}<li class=taskHit>
                 <img src={% static 'tasks/images/dolars.png' %} /><span>{{ task.cost }}</span>
-            </li>{% endif %}
-            <li class=taskText>{{ task.title }}</li>
+            </li>
+            {% else %}
+                <span id=numCompletedTimes>{{ task.numTimesCompleted }}</span>
+            {% endif %}
+
         </ul>
     </dd>
     {% endfor %}

@@ -20,6 +20,10 @@ var Tasks = {
             function (data) {
                 var values = $.parseJSON(data);
                 originalCredits = parseInt($("#credits span").html());
+
+                var numCompletedTimes = parseInt($("#"+id.id+" span#numCompletedTimes").html());
+                $("#"+id.id+" span#numCompletedTimes").html(numCompletedTimes + 1);
+
                 $("#credits span").html(values.credits);
                 $("#hp span").html(values.hp);
                 $("#credits").effect('bounce', {}, 500);
@@ -70,6 +74,7 @@ var Tasks = {
                         $("#trash").fadeIn();
                         $("#reward").fadeIn();
                         $(this).data('out', 0);
+                        $(this).css("padding-bottom","2em");
                     },
                     deactivate: function (event, ui) {
                         $("#trash").fadeOut();
@@ -80,7 +85,10 @@ var Tasks = {
                         if (newOrder == "") return;
 
 
-                        if ($(this).data('out') == 1)  $("dl#list4").sortable("cancel");
+                        if ($(this).data('out') == 1) {
+                            $("dl#list4").sortable("cancel");
+                            return;
+                        }
 
                         $.get('saveRewardsOrder/', {order: newOrder},function (result) {
                         }).fail(function () {
@@ -90,6 +98,7 @@ var Tasks = {
                     out: function (event, ui) {
                         //alert("element out of the list.");
                         $(this).data('out', 1);
+                        $(this).css("padding-bottom","1em");
                     },
                     items: "dd:not(.wontMove)"
                 });
@@ -123,11 +132,12 @@ var Tasks = {
         }).done(function (response) {
                 $("div#content").append(response);
 
-                $("dl").sortable({
+                $("dl#list"+id).sortable({
                     activate: function (event, ui) {
                         $("#trash").fadeIn();
                         $("#completed").fadeIn();
-
+                        $("dl#list"+id).data('out', 0);
+                        $("dl#list"+id).css("padding-bottom","2em");
                     },
                     deactivate: function (event, ui) {
                         $("#trash").fadeOut();
@@ -137,10 +147,20 @@ var Tasks = {
                         var newOrder = $(this).sortable('toArray').toString();
                         if (newOrder == "") return;
 
+                        if ($(this).data('out') == 1) {
+                            $("dl#list"+id).sortable("cancel");
+                            return;
+                        }
+
                         $.get('saveTasksOrder/', {order: newOrder},function (result) {
                         }).fail(function () {
                                 location.reload();
                             });
+                    },
+                    out: function (event, ui) {
+                        //alert("element out of the list.");
+                        $("dl#list"+id).data('out', 1);
+                        $("dl#list"+id).css("padding-bottom","1em");
                     },
                     items: "dd"
                 });

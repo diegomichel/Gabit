@@ -41,12 +41,10 @@ class Task(models.Model):
     value = models.IntegerField(default=10)
     type = models.IntegerField(default=0)
     order = models.IntegerField(default=0)
-    priority = models.IntegerField(default=0)
     completed_at = models.DateTimeField(blank=True, null=True)
     created_at = models.DateTimeField(default=timezone.now())
-    repeat_rate = models.IntegerField(default=0)
-    minutes = models.IntegerField(default=0)
-    uses = models.IntegerField(default=0)
+    minutesToComplete = models.IntegerField(default=0)
+    numTimesCompleted = models.IntegerField(default=0)
 
     todo = 0
     habit = 1
