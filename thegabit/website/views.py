@@ -21,25 +21,25 @@ def index(request):
 def loginUser(request):
     if request.user.is_authenticated():
         request.user.log_set.create(record="User Authenticated");
-        return HttpResponse(serializers.serialize("json", [request.user.get_profile()]))
+        return HttpResponse(serializers.serialize("json", [request.user.userprofile]))
 
     if request.method == 'POST':
         form = AuthenticationForm(data=request.POST)
         if form.is_valid():
             if request.user.is_authenticated():
                 request.user.log_set.create(record="User Authenticated");
-                return HttpResponse(serializers.serialize("json", [request.user.get_profile()]))
+                return HttpResponse(serializers.serialize("json", [request.user.userprofile]))
 
             try:
                 username = request.POST['username']
                 password = request.POST['password']
             except NameError:
-                return HttpResponse(serializers.serialize("json", [request.user.get_profile()]))
+                return HttpResponse(serializers.serialize("json", [request.user.userprofile]))
 
             user = authenticate(username=username, password=password)
             if user is not None:
                 login(request, user)
-                return HttpResponse(serializers.serialize("json", [request.user.get_profile()]))
+                return HttpResponse(serializers.serialize("json", [request.user.userprofile]))
             else:
                 return HttpResponse("False")
         else:
@@ -52,18 +52,18 @@ def loginUser(request):
     })
     # if request.user.is_authenticated():
     #     request.user.log_set.create(record="User Authenticated");
-    #     return HttpResponse(serializers.serialize("json", [request.user.get_profile()]))
+    #     return HttpResponse(serializers.serialize("json", [request.user.userprofile]))
     #
     # try:
     #     username = request.POST['username']
     #     password = request.POST['password']
     # except NameError:
-    #     return HttpResponse(serializers.serialize("json", [request.user.get_profile()]))
+    #     return HttpResponse(serializers.serialize("json", [request.user.userprofile]))
     #
     # user = authenticate(username=username, password=password)
     # if user is not None:
     #     login(request, user)
-    #     return HttpResponse(serializers.serialize("json", [request.user.get_profile()]))
+    #     return HttpResponse(serializers.serialize("json", [request.user.userprofile]))
     # else:
     #     return HttpResponse("False")
 
@@ -197,7 +197,7 @@ def completeTask(request):
 
     request.user.log_set.create(record="Task done: " + task.get().title + " Won: " + str(task.get().value));
 
-    profile = request.user.get_profile();
+    profile = request.user.userprofile;
 
     extra_credits = 0;
     if random.randint(1, 8) == 1:
@@ -209,7 +209,7 @@ def completeTask(request):
     profile.credits += task.get().value + extra_credits;
     profile.save()
 
-    values = {'hp': request.user.get_profile().hp, 'credits': profile.credits, 'extra_credits': extra_credits}
+    values = {'hp': request.user.userprofile.hp, 'credits': profile.credits, 'extra_credits': extra_credits}
 
     return HttpResponse(json.dumps(values))
 
@@ -220,7 +220,7 @@ def buyReward(request):
     reward = request.user.reward_set.filter(pk=id)
     reward.update(uses=reward.get().uses + 1)
 
-    profile = request.user.get_profile()
+    profile = request.user.userprofile
     profile.credits -= reward.get().cost
 
     request.user.log_set.create(record="Bought reward: " + reward.get().title + " cost: " + str(reward.get().cost));
@@ -230,6 +230,6 @@ def buyReward(request):
 
     profile.save()
 
-    values = {'hp': request.user.get_profile().hp, 'credits': profile.credits}
+    values = {'hp': request.user.userprofile.hp, 'credits': profile.credits}
 
     return HttpResponse(json.dumps(values))
