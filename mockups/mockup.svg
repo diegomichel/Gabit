@@ -14,7 +14,7 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.48.2 r9819"
-   sodipodi:docname="New document 1">
+   sodipodi:docname="mockup.svg">
   <defs
      id="defs4" />
   <sodipodi:namedview
@@ -24,16 +24,16 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.979899"
-     inkscape:cx="173.76167"
-     inkscape:cy="963.54521"
+     inkscape:zoom="7.919596"
+     inkscape:cx="327.08611"
+     inkscape:cy="1052.3174"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="1280"
-     inkscape:window-height="961"
-     inkscape:window-x="1672"
-     inkscape:window-y="-8"
+     inkscape:window-width="929"
+     inkscape:window-height="554"
+     inkscape:window-x="377"
+     inkscape:window-y="206"
      inkscape:window-maximized="1" />
   <metadata
      id="metadata7">
@@ -51,6 +51,16 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1">
+    <rect
+       y="-41.81321"
+       x="359.61429"
+       height="32"
+       width="32"
+       id="rect3853"
+       style="fill:none;fill-opacity:1;stroke:none"
+       inkscape:export-filename="C:\Python27\theGabit\mockups\delete.png"
+       inkscape:export-xdpi="91.511467"
+       inkscape:export-ydpi="91.511467" />
     <rect
        style="fill:#f4eed7;fill-opacity:1;stroke:none"
        id="rect2985"
@@ -80,22 +90,22 @@
        id="rect2991"
        style="fill:#f4eed7;fill-opacity:1;stroke:none" />
     <rect
-       style="fill:#b3b3b3;fill-opacity:1;stroke:#000000;stroke-width:1.13037181"
+       style="fill:#a7dbd8;fill-opacity:1;stroke:#5f7b7a;stroke-width:1.12144887;stroke-opacity:1"
        id="rect3057"
-       width="174.24623"
-       height="21.213203"
-       x="49.497478"
-       y="9.8847637" />
+       width="174.25516"
+       height="20.878551"
+       x="50.50317"
+       y="10.223878" />
     <text
        xml:space="preserve"
        style="font-size:48px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:HelveticaRounded LT Std Bd;-inkscape-font-specification:HelveticaRounded LT Std Bd Bold"
-       x="53.033012"
+       x="54.043167"
        y="24.531981"
        id="text3053"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan3055"
-         x="53.033012"
+         x="54.043167"
          y="24.531981"
          style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial">task lavar la ropa...</tspan></text>
     <g
@@ -141,7 +151,7 @@
          style="fill:#ffffff;fill-opacity:1;stroke:#b3b3b3;stroke-width:1.15867198" />
     </g>
     <g
-       transform="matrix(0.18282336,0,0,0.18282336,141.25652,33.700482)"
+       transform="matrix(0.18282336,0,0,0.18282336,142.26667,33.700482)"
        id="g3071-2">
       <g
          transform="matrix(0.70710678,0.70710678,-0.70710678,0.70710678,16.864363,-242.3204)"
@@ -173,7 +183,7 @@
       </g>
     </g>
     <g
-       transform="matrix(0.18282336,0,0,0.18282336,158.24703,39.148527)"
+       transform="matrix(0.18282336,0,0,0.18282336,159.25718,39.148527)"
        id="g3133-4">
       <path
          id="rect3063-9-2"
@@ -183,12 +193,12 @@
          inkscape:connector-curvature="0" />
     </g>
     <rect
-       style="fill:#b3b3b3;fill-opacity:1;stroke:#000000;stroke-width:1.13037181"
+       style="fill:#f38630;fill-opacity:1;stroke:#7a4318;stroke-width:1.12144887000000000;stroke-opacity:1"
        id="rect3057-3"
-       width="174.24623"
-       height="21.213203"
-       x="50.257629"
-       y="43.724869" />
+       width="174.25516"
+       height="20.878551"
+       x="50.253166"
+       y="44.063984" />
     <text
        xml:space="preserve"
        style="font-size:48px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:HelveticaRounded LT Std Bd;-inkscape-font-specification:HelveticaRounded LT Std Bd Bold"
@@ -244,12 +254,12 @@
          inkscape:connector-curvature="0" />
     </g>
     <rect
-       style="fill:#b3b3b3;fill-opacity:1;stroke:#000000;stroke-width:1.13037181"
+       style="fill:#b3b3b3;fill-opacity:1;stroke:#000000;stroke-width:1.12144887"
        id="rect3057-3-1"
-       width="174.24623"
-       height="21.213203"
-       x="49.752556"
-       y="77.56498" />
+       width="174.25516"
+       height="20.878551"
+       x="49.748093"
+       y="77.904091" />
     <text
        xml:space="preserve"
        style="font-size:48px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:HelveticaRounded LT Std Bd;-inkscape-font-specification:HelveticaRounded LT Std Bd Bold"
@@ -305,26 +315,26 @@
          inkscape:connector-curvature="0" />
     </g>
     <rect
-       style="fill:#b3b3b3;fill-opacity:1;stroke:#000000;stroke-width:1.13037181"
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1.12144887"
        id="rect3057-3-1-1"
-       width="174.24623"
-       height="21.213203"
-       x="49.247478"
-       y="123.52692" />
+       width="174.25516"
+       height="20.878551"
+       x="49.748093"
+       y="110.73405" />
     <text
        xml:space="preserve"
        style="font-size:48px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:HelveticaRounded LT Std Bd;-inkscape-font-specification:HelveticaRounded LT Std Bd Bold"
-       x="52.783016"
-       y="138.17413"
+       x="53.288094"
+       y="125.04215"
        id="text3053-2-8-2"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan3055-2-9-3"
-         x="52.783016"
-         y="138.17413"
+         x="53.288094"
+         y="125.04215"
          style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial">task lavar la ropa...</tspan></text>
     <g
-       transform="matrix(0.18282336,0,0,0.18282336,141.00654,147.34263)"
+       transform="matrix(0.18282336,0,0,0.18282336,141.51161,134.21065)"
        id="g3071-2-1-2-3">
       <g
          transform="matrix(0.70710678,0.70710678,-0.70710678,0.70710678,16.864363,-242.3204)"
@@ -356,7 +366,7 @@
       </g>
     </g>
     <g
-       transform="matrix(0.18282336,0,0,0.18282336,157.99704,152.79068)"
+       transform="matrix(0.18282336,0,0,0.18282336,158.50211,139.6587)"
        id="g3133-4-7-4-3">
       <path
          id="rect3063-9-2-6-3-8"
@@ -364,6 +374,64 @@
          d="M 277,-144.6875 261.65625,-129.34375 284.6875,-106.3125 261.65625,-83.3125 277,-67.96875 300,-91 323.03125,-67.96875 338.375,-83.3125 315.375,-106.3125 338.375,-129.34375 323.03125,-144.6875 300,-121.6875 277,-144.6875 z"
          style="fill:#ffffff;fill-opacity:1;stroke:#b3b3b3;stroke-width:1.15867198"
          inkscape:connector-curvature="0" />
+    </g>
+    <rect
+       style="fill:none;fill-opacity:1;stroke:none"
+       id="rect3808"
+       width="32"
+       height="32"
+       x="297.86871"
+       y="-34.994678"
+       inkscape:export-filename="C:\Python27\theGabit\mockups\edit.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <g
+       transform="matrix(0.40439765,0,0,0.40439765,197.83548,12.675995)"
+       id="g3071-5"
+       inkscape:export-filename="C:\Python27\theGabit\mockups\edit.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90">
+      <g
+         transform="matrix(0.70710678,0.70710678,-0.70710678,0.70710678,16.864363,-242.3204)"
+         id="g3099-2">
+        <rect
+           style="fill:#ffffff;fill-opacity:1;stroke:#b3b3b3"
+           id="rect3063-3"
+           width="21.718279"
+           height="64.649765"
+           x="300.26782"
+           y="-114.36401" />
+        <path
+           sodipodi:type="star"
+           style="fill:#ffffff;fill-opacity:1;stroke:#b3b3b3"
+           id="path3065-16"
+           sodipodi:sides="3"
+           sodipodi:cx="301.02545"
+           sodipodi:cy="-45.168556"
+           sodipodi:r1="16.17033"
+           sodipodi:r2="8.085165"
+           sodipodi:arg1="1.5707963"
+           sodipodi:arg2="2.6179939"
+           inkscape:flatsided="true"
+           inkscape:rounded="0"
+           inkscape:randomized="0"
+           d="M 301.02545,-28.998226 287.02153,-53.253721 315.02937,-53.253722 z"
+           inkscape:transform-center-y="3.1677649"
+           transform="matrix(0.78359928,0,0,0.78359928,75.243635,-1.4226182)" />
+      </g>
+    </g>
+    <g
+       transform="matrix(0.37576784,0,0,0.37576784,263.1854,14.694876)"
+       id="g3133-8"
+       inkscape:export-filename="C:\Python27\theGabit\mockups\delete.png"
+       inkscape:export-xdpi="91.511467"
+       inkscape:export-ydpi="91.511467">
+      <path
+         inkscape:connector-curvature="0"
+         id="rect3063-9-8"
+         transform="translate(2.0203048,1.5152293)"
+         d="M 277,-144.6875 261.65625,-129.34375 284.6875,-106.3125 261.65625,-83.3125 277,-67.96875 300,-91 323.03125,-67.96875 338.375,-83.3125 315.375,-106.3125 338.375,-129.34375 323.03125,-144.6875 300,-121.6875 277,-144.6875 z"
+         style="fill:#ffffff;fill-opacity:1;stroke:#b3b3b3;stroke-width:1.15867198" />
     </g>
   </g>
 </svg>
