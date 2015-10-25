@@ -113,6 +113,7 @@ var Tasks = {
                     });
                 });
 
+
                 $("dl#list" + 4 + " dd").on("mouseup", function () {
                     $("#habit_title" + 4).val("");
                     $("dl#list" + 4 + " > dd").each(function () {
@@ -138,6 +139,7 @@ var Tasks = {
                         $("#completed").fadeIn();
                         $("dl#list"+id).data('out', 0);
                         $("dl#list"+id).css("padding-bottom","2em");
+
                     },
                     deactivate: function (event, ui) {
                         $("#trash").fadeOut();
@@ -146,6 +148,7 @@ var Tasks = {
                     update: function (event, ui) {
                         var newOrder = $(this).sortable('toArray').toString();
                         if (newOrder == "") return;
+                        // $("dl#list" + id +" dd:gt(4)").hide();
 
                         if ($(this).data('out') == 1) {
                             $("dl#list"+id).sortable("cancel");
@@ -159,6 +162,7 @@ var Tasks = {
                     },
                     out: function (event, ui) {
                         //alert("element out of the list.");
+                        //$("dl#list" + id +" dd:gt(4)").hide();
                         $("dl#list"+id).data('out', 1);
                         $("dl#list"+id).css("padding-bottom","1em");
                     },
@@ -183,8 +187,8 @@ var Tasks = {
                     });
                 })
 
-
-                $("dl#list" + id).disableSelection().hide().fadeIn();
+              //  $("dl#list" + id +" dd:gt(4)").hide();
+               // $("dl#list" + id +" dd:lt(4)").disableSelection().hide().fadeIn();
                 if (id == 1)
                     Tasks.loadHelper(2);
                 if (id == 2)
